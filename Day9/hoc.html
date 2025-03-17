@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "keyboard Events">
+        <input type="text" onkeydown="functionName()">
+        <input type="text" onkeypress="pressFunction()">
+        <input type="text" onkeyup="upFunction()">
+        <script>
+            function functionName(){
+                alert("Onkeydown");
+            }
+            function pressFunction(){
+                alert("Onkeypress");
+            }
+            function upFunction(){
+                alert("Onkeyup");
+            }
+        </script>
+    </div>
+    <div id = "Mouse Events">
+        <p onclick="functionName()">test onclick</p>
+        <p ondblclick="functionName1()">test Ondbclick</p>
+        <p onmousedown="functionName2()">test onmousedown</p>
+        <p onmousemove="functionName3()">test onmousemove</p>
+        <p onmouseout="functionName4()">test onmouseout</p>
+        <script>
+            function functionName(){
+                alert("firing a mouse event");
+            }
+            function functionName1(){
+                alert("Ondbclick alert");
+            }
+            function functionName2(){
+                alert("Onmousedown alert");
+            }
+            function functionName3(){
+                alert("Onmousemove alert");
+            }
+            function functionName4(){
+                alert("Onmouseout");
+            }
+        </script>
+    </div>
+    <div id = "Drag event">
+        <p draggable="true" ondragstart="alert('Started Drag')">draggable text</p>
+        <p draggable="true" ondrag="alert('Drag')">draggable text</p>
+        <p draggable="true" ondragend="alert('Dragend')">draggable text</p>
+    </div>
+    <div id = "clipboard Events">
+        <p oncopy = "functionName()">Test oncopy</p>
+        <p oncut = "functionName1()">Test oncut</p>
+        <script>
+            function functionName(){
+                alert("You just copy this text");
+            }
+            function functionName1(){
+                alert("You cut the test");
+            }
+        </script>
+    </div>
+</html>
