@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "text styling context">
+        <p id ="text1">Example text</p>
+        <p id ="text2">Example text</p>
+        <p id = "text3">Example text</p>
+        <style>
+            #text1{
+                text-transform :initial;
+                /* uppercase,none,; */
+                text-decoration: underline;
+                /* text-decoration: overline;
+                    text-decoration: line-through;
+                 */
+            }
+            #text2{
+                text-decoration-line:overline underline;
+                text-decoration-color: violet ;
+                text-decoration-style: dashed /* wavy,...*/;
+                text-indent: 30px;
+                letter-spacing: 5px;
+            }
+            #text3{
+                text-shadow: 3px 2px 1px rgb(117, 48, 48),
+                             4px 3px 2px orange,
+                             6px 4px 3px yellow;
+            }
+        </style>
+    </div>
+    <div id = "fonts">
+        <p id = "text4">Example Text</p>
+        <style>
+            #text4{
+                font-family: "Times New Roman", Arial, Helvetica, sans-serif;
+                font-style: oblique;
+                font-size: xx-large;
+                /* 50% x-large */
+            }
+        </style>
+    </div>
+    <div id = "text-properties">
+        <p id = "text5">Example Text <br> Example text</p>
+        <p id = "text6">Example 
+            
+            
+            
+            Text </p>
+        <p id = "text7">this is a lonnnnnnnnnnngggggggggggggggggggg word</p>
+        <style>
+            #text5{
+                word-spacing: 20px;
+                line-height: 20px;
+            }
+            #text6{
+                white-space: pre;
+                /* nowrap */
+            }
+            #text7{
+                width: 120px;
+            }
+        </style>
+    </div>
+</body>
+</html>
