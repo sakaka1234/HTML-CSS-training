@@ -1,0 +1,21 @@
+#text1{
+    color: bisque;
+}
+#text2{
+    color: cadetblue;
+}
+p {
+    color: blue; /* Quy tắc này sẽ bị ghi đè nếu có quy tắc mạnh hơn */
+}
+
+p.special {
+    color: red; /* Quy tắc này có độ ưu tiên cao hơn */
+}
+
+#unique {
+    color: green; /* ID selector có độ ưu tiên cao nhất */
+}
+
+p {
+    color: black !important; /* Ghi đè lên tất cả */
+}
