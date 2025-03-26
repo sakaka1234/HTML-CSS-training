@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "how can we color">
+        <p id = "text">Example Text</p>
+        <br>
+        <p id = "text1">This is a paragraph of text that will be separated by a column that we can add color to using the collumn-rule-color property. 
+            The column-rule-color property lets us color our column rule</p>
+        <style>
+            #text{
+                color:aquamarine;
+                background-color: black;
+                border: 10px solid;
+                border-color: blue;
+                border-top-color: red;
+            }
+            #text1{
+                width: 600px;
+                column-count: 2;
+                column-rule-style: solid;
+                column-rule-color: red;
+                column-rule-width:2px;
+            }
+        </style>
+
+    </div>
+    <div id = "Specifying colors">
+        <p id = "text3">Example text in magenta</p>
+        <p id = "text4">Example text in fushia</p>
+        <p id = "text5">Example text</p>
+        <style>
+            #text3{
+                color:magenta;
+            }
+            #text4{
+                color:fuchsia;
+            }
+            #text5{
+                color:green;
+                background-color: currentColor;
+            }
+        </style>
+    </div>
+    <div id = "saturation">
+        <img id = "testSaturation"src="../Shinoa.jpg" width="10%">
+        <img id = "testOpacity" src="../Shinoa1.jpg" width="10%">
+        <style>
+            #testSaturation{
+                filter: saturate(200%);
+                /* saturate(0) or saturate(1) or saturate(1.9) ... */
+            }
+            #testOpacity{
+                opacity: 0.5;
+            }
+        </style>
+    </div>
+    <div id = "filters" >
+        <img id = "testFilters"src="../Shinoa2.jpg" width="10%">
+        <style>
+            #testFilters{
+                /* filter: blur(3px); */
+                /* filter: brightness(150%); */
+                /* filter: contrast(150%); */
+                filter: drop-shadow(20px 15px 8px grey);
+                filter:grayscale(50%);
+                filter: hue-rotate(270deg);
+                filter: invert(100%);
+                filter:sepia(80%);
+                filter: saturate(50%) blur(2px) invert(100%);
+            }
+        </style>
+    </div>
+</body>
+</html>
