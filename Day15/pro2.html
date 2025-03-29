@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "positioning property">
+        <p id = "text10">Example Text</p>
+        <img id = "cuteGirl"src = "../Day2/Lyly.jpg" >
+        <p id = "greenText">Example Text</p>
+        <p id = "redText">Example Text</p>
+        <br>
+        <p id = "text11">Example Text Example Text Example Text Example Text Example Text Example Text Example Text Example Text Example Text Example Text Example Text</p>
+        
+        <style>
+            #text10{
+                position: absolute;
+                left: 50px;
+                bottom : 50px;
+            }
+            #cuteGirl{
+                float:right;
+                width: 50px;
+                height: 50px;
+            }
+            #text11{
+                clear: none;
+            }
+            #greenText{
+                color:green;
+                position:absolute;
+                left: 0px;
+                top : 0px;
+                z-index: 2;
+            }
+            #redText{
+                color:red;
+                position: absolute;
+                left : 4px;
+                top: 4px;
+                z-index: 1;
+            }
+        </style>
+    </div>
+    <div id = "clipping and masking property">
+        <img id = "shinoa2"src = "../Shinoa2.jpg">
+        <br>
+        <style>
+            #shinoa2{
+                /* clip-path: circle(); */
+                /* clip-path: inset(10px); */
+                clip-path: ellipse(50px);
+                clip-path: polygon(0 0, 100% 100%,0 80%);
+            }
+        </style>
+    </div>
+    <div id = "other property">
+        <p id = "text12">Example Text</p>
+        <style>
+            #text12{
+                cursor: pointer;
+                cursor: crosshair;
+                cursor: zoom-in;
+                cursor: zoom-out;
+                cursor: grab;
+                /* help, wait ,not-allowed, auto*/
+                user-select: none; 
+                /* or none */
+            }
+        </style>
+    </div>
+</body>
+</html>

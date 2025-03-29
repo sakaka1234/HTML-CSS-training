@@ -42,7 +42,7 @@
             }
         </style>
     </div>
-    <div>
+    <div id = "border property">
         <p id = "text2">Example Text</p>
         <p id = "text3">Example Text</p>
         <p id = "text4">Example Text</p>
@@ -83,5 +83,45 @@
             }
         </style>
     </div>
+    <div id = "box property">
+        <p id = "text6">Example text</p>
+        <p id = "text7">Example text</p>
+        <style>
+            #text6{
+                background-color: orangered;
+                box-sizing: content-box;
+                /* box-sizing: border-box; */
+                height: 100px;
+                width: 100px;
+                padding: 20px;
+                /* min-width: 120px; */
+                max-width: 100px;
+            }
+            #text7{
+                border: 3px solid;
+                box-shadow: 5px 10px 5px -2px purple inset,
+                            5px 10px 5px -2px blue; 
+            }
+        </style>
+        
+    </div>
+    <div id = "outline property">
+        <p id = "text8">Example Text</p>
+        <p id = "text9">Example Text</p>
+        <style>
+            #text8{
+                outline-style: inset;
+                /* double, dashed, dotted, solid, ridge, groove ,outset*/
+                outline-color: blue;
+                outline-width:thin;
+                outline-offset: 7px;
+                /* medium, thick */
+            }
+            #text9{
+                outline: 5px solid greenyellow;
+            }
+        </style>
+    </div>
+    
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "table style and display">
+        <table id = "table1">
+            <caption id = "caption1">Table caption</caption>
+            <tr>
+                <th>Column 1111111111111111111111111111 Heading</th>
+                <th>Column 2 Heading</th>
+                <th>Column 3 Heading</th>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+                <td>Cell 6</td>
+            </tr>
+        </table>
+        <style>
+            #table1,th,td{
+                border: 1px solid;
+                text-align: right;
+            }
+            #table1{
+                border-collapse: collapse;
+                width: 100%;
+                height: 100%;
+                table-layout: auto;
+                /* table-layout: fixed; */
+            }
+            #caption1{
+                caption-side: bottom;
+            }
+            td,th{
+                height: 40px;
+                vertical-align: top;
+            }
+            tr:hover{
+                background-color: teal;
+            }
+            tr:nth-child(odd){
+                background-color: blue;
+            }
+            tr:nth-child(even){
+                background-color: aqua;
+            }
+            tr:nth-child(1){
+                background-color: red;
+            }
+        </style>
+    </div>
+</body>
+</html>
