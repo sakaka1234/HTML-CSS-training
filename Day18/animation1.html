@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "div1"></div>
+    <div id = "div2"></div>
+    <div id = "div3"></div>
+    <div id = "div4"></div>
+    <div id = "div5"></div>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            animation-name: anim;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            animation-name: anim2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #div3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            animation-name: anim3;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #div4{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+            animation-name: anim4;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #div5{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(183, 39, 123);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 250px;
+            animation-name: anim5;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            backface-visibility: visible;
+        }
+        @keyframes anim5 {
+            from{transform: rotateY(0deg);}
+            to{transform: rotateY(360deg);}
+            
+        }
+        @keyframes anim4 {
+            from{transform: skew(40deg);}
+            to{transform: skew(-40deg);}
+        }
+        @keyframes anim3{
+            from{transform: scale(0.1);}
+            to{transform: scale(1.0);}
+        }
+        @keyframes anim2 {
+            from{transform: translate(10px);}
+            to{transform: translate(100px);}
+        }
+        @keyframes anim {
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}        
+        }
+
+    </style>
+</body>
+</html>

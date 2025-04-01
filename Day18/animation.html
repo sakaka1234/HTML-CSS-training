@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "transition1"></div>
+    <br>
+    <div id = "animation1"></div>
+    <style>
+        #transition1{
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            /* transition: height 3s; */
+            /* transition: background-color 3s, height 3s; */
+            transition-delay: 1s;
+            transition-property: background-color;
+            transition-duration: 3s;
+            /* transition-timing-function: ease; */
+            /* transition-timing-function: linear; */
+            transition-timing-function: ease-in;
+            /* ease-out */
+        }
+        #transition1:hover{
+            /* height: 400px; */
+            background-color: red;
+            height: 400px;
+        }
+        #animation1{
+            height: 400px;
+            width: 400px;
+            /* background-color: green; */
+            animation: animationName;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: 3;
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+            animation-direction: normal;
+            animation-timing-function: linear;
+            /* animation-fill-mode: forwards ; */
+            /* animation-fill-mode: backwards ; */
+            animation-fill-mode: both ;
+            /* animation-play-state: paused; */
+            animation-play-state: running;
+            animation: animationName 3s ease-out 1s alternate-reverse both running;
+        }
+        @keyframes animationName{
+            from{background-color: green;}
+            to{background-color: red;}
+        }
+    </style>
+</body>
+</html>
