@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "div1"></div>
+    <div id = "div2"></div>
+    <div id = "div3"></div>
+    <div id = "div4"></div>
+    <div id = "div5">Example Text...Example Text...Example Text...Example Text...
+        Example Text...Example Text...Example Text...Example Text...Example Text...
+        Example Text...Example Text...Example Text...Example Text...
+        Example Text...Example Text...Example Text...Example Text...Example Text...
+        Example Text...Example Text...Example Text...Example Text...Example Text...
+        Example Text...Example Text...Example Text...Example Text...Example Text...
+        Example Text...Example Text...Example Text...Example Text...Example Text...
+    </div>
+    <p id = "text1">Test font animation</p>
+    <style>
+        #text1{
+            font-size: 3vw;
+            animation: scaleText 10s infinite;
+        }
+        #div1{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            animation: rainbowAnim 5s infinite;
+            animation-delay: 0.75s;
+        }
+        #div2{
+            width: 500px;
+            height: 500px;
+            background-image: url(../Shinoa.jpg);
+            background-position: top left; 
+            animation: movebg 3s infinite;
+        }
+        #div3{
+            width: 500px;
+            height: 500px;
+            background-image: url(../Shinoa.jpg);
+            background-size: 30px 30px; 
+            animation: movebg2 3s infinite;
+        }
+        #div4{
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+            animation: borderRadiusAnim 10s infinite;
+            float: right;
+        }
+        #div5{
+            column-count: 1;
+            animation: columnAnim 2s infinite;
+        }
+        @keyframes scaleText{
+            from{font-size: 1vw;}
+            to{font-size: 5vw;}
+        }
+        @keyframes columnAnim {
+            from{column-count: 1;}
+            to{column-count: 5;}
+        }
+        @keyframes borderRadiusAnim {
+            50%{border-top-right-radius: 150px;}
+            50%{border-top-left-radius: 150px;}
+            50%{border-bottom-right-radius: 150px;}
+            50%{border-bottom-left-radius: 150px;}
+        }
+        @keyframes movebg2 {
+            100%{background-size: 60px 60px;}
+        }
+        @keyframes movebg{
+            100%{background-position: bottom right;}
+        }
+        @keyframes rainbowAnim{
+            0%{background-color: red;}
+            15%{background-color: orange;}
+            30%{background-color: yellow;}
+            45%{background-color: green;}
+            60%{background-color: blue;}
+            75%{background-color: indigo;}
+            90%{background-color: violet;}
+            100%{background-color: purple;}
+        }
+    </style>
+</body>
+</html>

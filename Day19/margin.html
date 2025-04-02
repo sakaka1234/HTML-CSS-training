@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "text1">
+        Example Text
+    </p>
+    <p id = "text2">Example Test 2</p>
+    <p id = "text3">Example Test 3</p>
+    <p id = "text4">Some example text to animate</p>
+    <div id = "div1"></div>
+    <style>
+        #text1{
+            animation: textAnim 2s infinite;
+        }
+        #text2{
+            animation: textAnim2 2s infinite;
+        }
+        #text3{
+            animation: textAnim3 1s infinite;
+        }
+        #text4{
+
+        }
+        #div1{
+            width: 150px;
+            height: 100px;
+            background-image: url(../TriBao.jpg);
+            animation: sizeAnim 1s infinite;
+        }
+        @keyframes textAnim3{
+            from{word-spacing: 5px;}
+            to{word-spacing: 100px;}
+            from{letter-spacing: 5px;}
+            to{letter-spacing: 20px;}
+        }
+        @keyframes paddingAnim{
+            from{padding-left: 0px;}
+            to{padding-left: 120px;}
+        }
+        @keyframes sizeAnim {
+            0%{height: 100px;width: 100px;}
+            30%{height: 300px;width: 100px;}
+            50%{height: 100px;width: 300px;}
+            70%{height: 300px;width: 300px;}
+            100%{height: 100px;width: 100px;}
+        }
+        @keyframes textAnim {
+            from{margin-top: 0px;}
+            to{margin-top: 100px;}
+        }
+        @keyframes textAnim2{
+            0%{text-decoration: underline;
+                color: red;
+            }
+            25%{text-decoration: overline;
+                color: aqua;
+            }
+            50%{text-decoration: underline;
+                color: blueviolet;
+            }
+            75%{text-decoration: overline;
+                color: cadetblue;
+            }
+            100%{text-decoration: underline;
+                color: chocolate;
+            }
+        }
+    </style>
+</body>
+</html>
