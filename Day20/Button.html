@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "button1" type = "button"> </button>
+    <button id = "button2" type="button">Button</button>
+    <style>
+        #button2{
+            width: 400px;
+            height: 200px;
+            animation-name: pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px rosybrown;
+        }
+        #button2:hover{
+            background: grey;
+
+        }
+        #button2:active{
+            background-image: url(../Day2/Lyly.jpg);
+            box-shadow: 2px 4px red;
+        }
+        @keyframes pulse{
+            0%{transform: scale(1);}
+            30%{transform: scale(1);}
+            40%{transform: scale(1);}
+            50%{transform: scale(1.10);}
+            60%{transform: scale(1);}
+            70%{transform: scale(1);}
+            80%{transform: scale(1);}
+        }
+        #button1{
+            border-radius: 20px;
+            box-shadow: 4px 4px royalblue;
+            background-image: url(../Shinoa2.jpg);
+            height: 1000px;
+            width: 1000px;
+        }
+        #button1:hover{
+            color: aquamarine;
+            background-color: red;
+            transition-duration: 1s;
+        }
+        #button1:active{
+            /* background-color: orchid;
+            color: rgb(16, 16, 128);
+            transition-duration: 0s; */
+            background-image: url(../Shinoa.jpg);
+        }
+    </style>
+</body>
+</html>
