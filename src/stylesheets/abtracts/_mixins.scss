@@ -1,0 +1,21 @@
+//section1
+@use './variables' as *;
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin reponsive($breakpoint){
+    @if $breakpoint == $mobile{
+        @media(max-width: $mobile){@content;}
+    }@else if $breakpoint == $tablet{
+        @media(max-width: $tablet){@content;}
+    }@else if $breakpoint == $desktop{
+        @media(max-width: $desktop){@content;}
+    }@else if $breakpoint == $large-desktop{
+        @media(max-width: $mobile){@content;}
+    }
+}
+@function lighten-color($color,$percentage){
+    @return lighten($color,$percentage);
+}

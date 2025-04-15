@@ -1,0 +1,26 @@
+@use '../abtracts/variables' as *;
+.btn{
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    &-primary{
+        background-color: $accent-color;
+        color: $white;
+        &:hover{
+            background-color: darken($accent-color,10%);
+        }
+    }
+    .btn-icon{
+        margin-left: 10px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border-radius: 50%;
+    }
+}
+
+
