@@ -1,44 +1,67 @@
-@use '../abstracts/' as *;
-.header{
-    background-color: $primaryColor;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.header {
+    background-color: $primary-color;
     padding: 20px 0;
-    position : sticky;
+    position: sticky;
+    top: 0;
     z-index: 100;
-    &__wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    &__logo{
-        display: flex;
-        align-items: center;
-    }
-    &__nav{
-        ul{
-            display: flex;
-            gap: 30px;
-            li a{
-                color: $white;
-                &:hover{
-                    color: $accent-color;
-                }
-            }
-        }
-    }
-    @include responsive($tablet){
-        display: none;
-    }
-    &__service_hours{
-        display: flex;
-        align-items: center;
+  
+    &__logo {
+      display: flex;
+      align-items: center;
+      
+      .logo-icon {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: $accent-color;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      
+      .logo-text {
+        font-size: 1.5rem;
+        font-weight: bold;
         color: $white;
-        .service-icon{
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: rgb(243, 19, 19);
-            border-radius: 50%;
-            margin-right: 10px;
-        }
+      }
     }
-}
+  
+    &__nav {
+      ul {
+        display: flex;
+        gap: 30px;
+        
+        li a {
+          color: $white;
+          font-weight: 500;
+          transition: color 0.3s ease;
+          
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  
+    &__service-hours {
+      display: flex;
+      align-items: center;
+      color: $white;
+      
+      .service-icon {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #ff6b6b; // Red dot for 24-hour service
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+  }
