@@ -28,6 +28,6 @@
     "parcel-bundler": "^1.12.5",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^2.0.1",
-    "sass": "^1.86.3"
+    "sass": "^1.87.0"
   }
 }
