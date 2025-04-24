@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+.logo-icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: $accent-color;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.logo-text{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $white;
+}
