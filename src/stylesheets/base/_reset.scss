@@ -1,31 +1,31 @@
 @use '../abstracts/variables' as *;
-*{
-    margin : 0;
-    padding : 0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-body{
-    font-family: 'Helvetica', 'Arial' ,sans-serif;
+  }
+  
+  body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
     color: $white;
     background-color: $white;
-}
-
-a{
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  a {
     text-decoration: none;
-    color : inherit;
-}
-ul{
+    color: inherit;
+  }
+  
+  ul {
     list-style: none;
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight: bold;
-    line-height: 1.2;
-}
-h1{
-    font-size: 2.5em;
-}
-h3{
-    font-size: 1rem;
-}
+  }
+  
 

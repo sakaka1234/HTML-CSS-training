@@ -1,98 +1,61 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 .features-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color; // nền tổng
+  padding: 30px 20px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  z-index: 1;
+  margin-top: -40px;
+  width: 85%;
+  transform: translateX(100px);
+  
+  .feature-item {
     display: flex;
-    justify-content: space-between;
-    background-color: $white;
-    padding: 30px 50px;
-    border-radius: 10px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-    margin-top: -50px;
+    align-items: center;
+    margin: 0 20px;
     position: relative;
-    z-index: 2;
     
-    .feature-item {
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 40px;
+      background-color: $divider-color; // vạch ngăn
+    }
+
+    &__icon-wrapper {
+      width: 40px;
+      height: 40px;
+      background-color: $icon-bg-color; // vòng tròn nền xám xanh
+      border-radius: 50%;
       display: flex;
+      justify-content: center;
       align-items: center;
-      
-      &__icon {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background-color: $light-blue;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-        color: $accent-color;
+      margin-right: 10px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
       }
-      
-      &__content {
-        h3 {
-          font-size: 1rem;
-          color: $primary-color;
-          font-weight: 600;
-        }
+    }
+
+    &__content {
+      h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $text-color;
+        line-height: 1.2;
       }
     }
   }
-  
-  // Responsive Styles
-  @media (max-width: $desktop) {
-    .hero {
-      &__image {
-        width: 25%;
-      }
-      
-      &__content {
-        width: 50%;
-      }
-    }
-    
-    .features-bar {
-      flex-wrap: wrap;
-      gap: 20px;
-      
-      .feature-item {
-        width: 48%;
-      }
-    }
-  }
-  
-  @media (max-width: $tablet) {
-    .header {
-      &__nav {
-        display: none; // Mobile menu would need a hamburger toggle
-      }
-    }
-    
-    .hero {
-      &__wrapper {
-        flex-direction: column;
-      }
-      
-      &__image {
-        width: 100%;
-        height: 300px;
-        order: 2;
-        
-        &--left {
-          display: none;
-        }
-      }
-      
-      &__content {
-        width: 100%;
-        order: 1;
-        margin-bottom: 30px;
-      }
-    }
-    
-    .features-bar {
-      .feature-item {
-        width: 100%;
-        margin-bottom: 15px;
-      }
-    }
-  }
+}
+
+

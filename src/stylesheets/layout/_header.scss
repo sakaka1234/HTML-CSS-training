@@ -2,11 +2,11 @@
 @use '../abstracts/mixins' as *;
 .header {
     background-color: $primary-color;
-    padding: 20px 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-  
+    font-weight: bold;
     &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -21,26 +21,30 @@
         display: inline-block;
         width: 30px;
         height: 30px;
-        background-color: $accent-color;
-        border-radius: 50%;
-        margin-right: 10px;
+        background-color: $primary-color;
+        transform: translate(-150px, 4px); 
+         
       }
       
       .logo-text {
         font-size: 1.5rem;
         font-weight: bold;
         color: $white;
+        transform:translateX(-150px);
+        display: inline-block;
+        
       }
     }
   
     &__nav {
       ul {
         display: flex;
-        gap: 30px;
+        gap: 80px;
         
         li a {
           color: $white;
-          font-weight: 500;
+          
+          font-weight: bold;
           transition: color 0.3s ease;
           
           &:hover {
@@ -62,6 +66,11 @@
         background-color: #ff6b6b; // Red dot for 24-hour service
         border-radius: 50%;
         margin-right: 10px;
+        transform: translate(150px,0);
+      }
+      .service-text{
+        display: inline-block;
+        transform: translate(150px,0);
       }
     }
   }

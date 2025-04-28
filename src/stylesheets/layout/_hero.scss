@@ -6,39 +6,29 @@
     position: relative;
     overflow: hidden;
     
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -100px;
-      left: 0;
-      right: 0;
-      height: 200px;
-      background-color: $white;
-      border-radius: 50% 50% 0 0;
-    }
+    
   
     &__wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: relative;
-      z-index: 1;
+      z-index: 3;
     }
   
     &__image {
       width: 30%;
-      height: 500px;
+      height: 720px;
       
-      &--left {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+      .hero-door-left {
+        display: inline-block;
+        transform: translate(-300px,-100px);
       }
       
-      &--right {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+      .hero-door-right {
+        display: inline-block;
+        transform: translate(220px,-100px);
+        z-index: 100;
       }
     }
   
@@ -55,25 +45,27 @@
       margin-bottom: 20px;
       
       span {
-        color: $white;
+        color: rgb(146, 149, 177);
         font-size: 0.9rem;
+        font-weight: bold;
       }
       
       .dot {
         display: inline-block;
         width: 5px;
         height: 5px;
-        background-color: $accent-color;
+        background-color: rgb(146, 149, 177);
         border-radius: 50%;
         margin: 0 10px;
       }
     }
   
     &__title {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: bold;
       margin-bottom: 30px;
       line-height: 1.2;
+      width: 105%;
     }
   
     &__features {
@@ -93,7 +85,7 @@
             display: inline-block;
             width: 20px;
             height: 20px;
-            background-color: $accent-color;
+            background-color: $primary-color;
             border-radius: 50%;
             position: relative;
             
@@ -104,7 +96,7 @@
               top: 4px;
               width: 6px;
               height: 10px;
-              border: solid $white;
+              border: solid rgb(64, 135, 221);
               border-width: 0 2px 2px 0;
               transform: rotate(45deg);
             }
@@ -112,7 +104,7 @@
         }
         
         &__text {
-          color: $white;
+          color: rgb(64, 135, 221);
         }
       }
     }
@@ -121,9 +113,9 @@
       .btn {
         display: inline-flex;
         align-items: center;
-        padding: 15px 30px;
+        padding: 10px 20px;
         border-radius: 50px;
-        font-weight: bold;
+        // font-weight: bold;
         transition: all 0.3s ease;
         
         &-primary {
@@ -138,11 +130,22 @@
         .btn-icon {
           margin-left: 10px;
           display: inline-block;
-          width: 20px;
-          height: 20px;
+          width: 40px;
+          height: 40px;
           background-color: $white;
           border-radius: 50%;
+          transform: translateX(10px);
         }
+        .phoneContact{
+          display: inline-block;
+          transform: translateY(10px);
+        }
+        
+      }
+      .contact-text{
+        font-size: 1.5rem;
+        line-height: 1.1;
+        font-weight: 300;
       }
     }
   }
