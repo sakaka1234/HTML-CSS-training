@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+.banner{
+    padding : 30px 0;
+    background: $white;
+    position: relative;
+    overflow: hidden;
+    height: 1000px;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background-color: $primary-color;
+        
+        clip-path: polygon(130px 0,1030px 0,80% 100%, 20% 100%);
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 3;
+    }
+    &__content{
+        display: inline-block;
+        transform: translateY(250px);
+        
+        .title{
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 700;
+            color: black;
+        }
+        .explain{
+            display: inline-block;
+            font-size: 18px;
+            color: rgb(163, 151, 151);
+            
+        }
+        .feature{
+            display: inline-block;
+            margin-right: 30px;
+            .detail{
+                display: flex;
+                color: $primary-color;
+                font-size: 20px;
+            }
+            .icon{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
