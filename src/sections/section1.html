@@ -1,122 +1,82 @@
-<header class="header">
-    <div class="container">
-        <div class="header__wrapper">
-            <div class="header__logo">
-                <a href="/">
-                    <!-- Logo placeholder -->
-                    <img src="../assets/icon/homeproo.svg" class="logo-icon"> 
-                    <!-- <span class="logo-icon"><img src="../assets/icon/homeproo.svg"></span> -->
-                    <span class="logo-text">HomePro</span>
-                </a>
-            </div>
-            
-            <nav class="header__nav">
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#blog">Our Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header__service-hours">
-                <!-- Icon placeholder -->
-                <span class="service-icon"></span>
-                <span class="service-text">24 Hour Services</span>
-            </div>
-        </div>
-    </div>
-</header>
 
 <!-- Hero Section -->
 <section class="hero">
-    <div class="container">
-        <div class="hero__wrapper">
-            <!-- Left worker image -->
-            <div class="hero__image ">
-                <img src="../assets/img/workerdoor.png" class="hero-door-left">
-            </div>
-            
-            <!-- Hero Content -->
-            <div class="hero__content">
-                <div class="hero__categories">
-                    <span>Maintenances</span>
-                    <span class="dot"></span>
-                    <span>Repairs</span>
-                    <span class="dot"></span>
-                    <span>Improvements</span>
-                </div>
-                
-                <h1 class="hero__title">
-                    Need improvement<br>
-                    or repair your home?<br>
-                    we can help!
-                </h1>
-                
-                <div class="hero__features">
-                    <div class="feature">
-                        <span class="feature__icon feature__icon--check" ></span>
-                        <span class="feature__text">Free Quotes</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature__icon feature__icon--check"></span>
-                        <span class="feature__text">100% Commitment-Free</span>
-                    </div>
-                </div>
-                
-                <div class="hero__cta">
-                    <a href="#contact" class="btn btn-primary">
-                        <span class="contact-text">Call Us Now</span>
-                        <span class="btn-icon"><img src="../assets/icon/phoneContact.svg" class="phoneContact"></span>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Right worker image -->
-            <div class="hero__image">
-                <!-- Image will be added via CSS background or you can use an img tag -->
-                 <img src="../assets/img/workertoilet.png" class="hero-door-right">
-            </div>
-        </div>
-        
-        <!-- Features Bar -->
-        <div class="features-bar">
-            <div class="feature-item">
-              <div class="feature-item__icon-wrapper">
-                <img src="../assets/icon/Ic_24-Guarantee.svg" alt="icon">
-              </div>
-              <div class="feature-item__content">
-                <h3>Satisfaction<br>Guarantee</h3>
-              </div>
-            </div>
-          
-            <div class="feature-item">
-              <div class="feature-item__icon-wrapper">
-                <img src="../assets/icon/Ic_24-Clock.svg" alt="icon">
-              </div>
-              <div class="feature-item__content">
-                <h3>24H<br>Availability</h3>
-              </div>
-            </div>
-          
-            <div class="feature-item">
-              <div class="feature-item__icon-wrapper">
-                <img src="../assets/icon/Ic_24-Map-pin.svg" alt="icon">
-              </div>
-              <div class="feature-item__content">
-                <h3>Local US<br>Professional</h3>
-              </div>
-            </div>
-          
-            <div class="feature-item">
-              <div class="feature-item__icon-wrapper">
-                <img src="../assets/icon/Ic_24-Calendar.svg" alt="icon">
-              </div>
-              <div class="feature-item__content">
-                <h3>Flexible<br>Appointments</h3>
-              </div>
+    <div class="hero__wrapper">
+       <div class="hero__image">
+          <img src="../assets/img/workerdoor.png" class="worker-image-left">
+       </div>
+       <div class="hero__content">
+          <div class="benefit">
+            <span>Maintenances</span>
+            <span class="dot"></span>
+            <span>Repairs</span>
+            <span class="dot"></span>
+            <span>Improvements</span>
+          </div>
+          <div class="title">
+            <div>Need Improvement</div>
+            <div>or repair your home ?</div>
+            <div>we can help!</div>
+          </div>
+          <div class="guarantee">
+            <!-- <span class="guarantee__icon"></span> -->
+            <span class="guarantee__text">Free quotes</span>
+
+            <span class="guarantee__text">100% Commitment-Free</span>            
+          </div>
+          <div class="btn">
+            <span class="text">Call Us Now</span>
+            <div class="icon">
+              <img src="../assets/icon/phoneContact.svg">
+             
             </div>
           </div>
-          
+       </div>
+       <div class="hero__image">
+          <img src="../assets/img/workertoilet.png" class="worker-image-right">
+       </div>
+
+       <div class="feature-bar">
+        <div class="group" id = "guarantee1">
+          <figure class="feature-icon" >
+            <img src="../assets/icon/Ic_24-Guarantee.svg">
+          </figure>
+          <span>Satisfaction<br> Guarantee</span>
+        </div>
+
+        <span class="devider"></span>
+
+        <div class="group" id = "clock">
+          <figure class="feature-icon" >
+            <img src="../assets/icon/Ic_24-Clock.svg">
+          </figure>
+          <span>24H<br> Avaibility</span>
+        </div>
+
+        <span class="devider"></span>
+
+        <div class="group" id = "map-pin">
+          <figure class="feature-icon" >
+            <img src="../assets/icon/Ic_24-Map-pin.svg">
+          </figure>
+          <span>Local US<br> Profesional</span>
+        </div>
+
+        <span class="devider"></span>
+
+        <div class="group" id = "calendar">
+          <figure class="feature-icon" >
+            <img src="../assets/icon/Ic_24-Calendar.svg">
+          </figure>
+          <span>Flexible<br> Appointments</span>
+        </div>
+        
+       </div>
+       <div class="hero__devider">
+        <span class="newdeviderX"></span>
+        <span class="newdeviderY"></span>
+       </div>
     </div>
+      
 </section>
+

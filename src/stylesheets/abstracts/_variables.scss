@@ -1,19 +1,23 @@
-$primary-color: #1e2c60; // Dark blue background
+$primary-color: #142257; // Dark blue background
+$feature-color: #1F3584;
 $accent-color: #25a7df; // Light blue for buttons and elements
 $white: #ffffff;
 $light-blue: #e6f7ff;
 $gray: #f5f5f5;
-$divider-color: rgba(255, 255, 255, 0.2); // màu vạch ngăn (trắng mờ)
+$divider-color: rgba(255, 255, 255, 0.374); // màu vạch ngăn (trắng mờ)
 $icon-bg-color: rgba(255, 255, 255, 0.1); // nền vòng tròn
 $text-color: #ffffff;
-$blue: #0099ff;
+$blue: #15B2F5;
 $blue-dark: #0077cc;
 $radius: 15px;
 $shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 $light-gray: #f0f8ff;
-
+$grey : #9EA3B5;
 // Breakpoints
-$mobile: 480px;
+$mobile: 250px;
 $tablet: 768px;
-$desktop: 1024px;
+$desktop: 1300px;
 $large-desktop: 1440px;
+// font
+$primary-font : PlusJakartaSansRegular;
+$primary-bold : PlusJakartaSansBold;

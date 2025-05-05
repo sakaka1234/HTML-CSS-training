@@ -1,55 +1,79 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
 .header {
     background-color: $primary-color;
-    padding: 10px 0;
+    padding: 1rem 0rem;
     position: sticky;
     top: 0;
     z-index: 100;
     font-weight: bold;
+    @include xmobile{
+      padding: 2rem 0rem;
+    }
+    @include xtablet{
+      padding: 2rem 0rem;
+    }
     &__wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex($justify: center,$align : center);
+      
     }
   
     &__logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      
+      position: absolute;
+      left: 10rem;
+      // border: 4px solid red;
+      @include xmobile{
+        left: 3rem;
+      }
+      @include xtablet{
+        left: 3rem;
+      }
       .logo-icon {
         display: inline-block;
         width: 30px;
         height: 30px;
-        background-color: $primary-color;
-        transform: translate(-150px, 4px); 
-         
+        transform: translateY(px-to-rem(4));
       }
       
       .logo-text {
         font-size: 1.5rem;
         font-weight: bold;
         color: $white;
-        transform:translateX(-150px);
-        display: inline-block;
+        
         
       }
     }
   
     &__nav {
-      ul {
-        display: flex;
-        gap: 80px;
+      justify-content: center;
+      @include xdesktop{
+        display: inline-flex;
         
-        li a {
-          color: $white;
+        ul {
+          display: flex;
+          gap: px-to-rem(80);
           
-          font-weight: bold;
-          transition: color 0.3s ease;
-          
-          &:hover {
-            color: $accent-color;
+          li a {
+            color: $white;
+            
+            font-weight: bold;
+            transition: color 0.3s ease;
+            
+            &:hover {
+              color: $accent-color;
+            }
           }
+        }
+      }
+      @include xtablet{
+        ul{display: none;}
+      }
+      @include xmobile{
+        ul{
+          display: none;
         }
       }
     }
@@ -58,19 +82,49 @@
       display: flex;
       align-items: center;
       color: $white;
-      
+      position: absolute;
+      right: 20rem;
+      @include xmobile{
+        right: 3rem;
+      }
+      @include xtablet{
+        right: 3rem;
+      }
       .service-icon {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: #ff6b6b; // Red dot for 24-hour service
-        border-radius: 50%;
-        margin-right: 10px;
-        transform: translate(150px,0);
+        @include xdesktop{
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: #ff6b6b; // Red dot for 24-hour service
+          border-radius: 50%;
+          margin-right: 10px;
+          transform: translate(px-to-rem(150),0);
+          
+        }
+        
+        @include xmobile{
+          background-image: url(../assets/icon/menu.svg);
+          height: px-to-rem(30);
+          width:  px-to-rem(30);
+          
+        }
+        @include xtablet{
+          background-image: url(../assets/icon/menu.svg);
+          height: px-to-rem(30);
+          width:  px-to-rem(30);
+          
+        }
       }
       .service-text{
-        display: inline-block;
-        transform: translate(150px,0);
+        @include xdesktop{
+          @include move($display : inline-block, $translateX : 9.5rem);
+        }
+        @include xtablet{
+          display: none;
+        }
+        @include xmobile{
+          display: none;
+        }
       }
     }
   }
