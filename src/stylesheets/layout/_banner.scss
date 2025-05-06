@@ -1,86 +1,134 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
 .banner{
-    padding : 30px 0;
-    background: $white;
-    position: relative;
-    overflow: visible;
-    height: 1000px;
-    gap: 60px;
-    &::before{
-        content: '';
+    &__container{
+        background-color: $white;
+        position : relative;
+        height: px-to-rem(900);
+        @include xmobile{
+            height: px-to-rem(1800);
+        }
+    }
+    &__header{
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 40px;
-        background-color: $primary-color;
-        
-        clip-path: polygon(130px 0,1030px 0,80% 100%, 20% 100%);
+        height: px-to-rem(60);
+        width: px-to-rem(1090);
+        background: $primary-color;
+        left: 50%;
+        transform: translateX(-50%);
+        top : 0;
+        clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%);
+        @include xtablet{
+            width: 90%;
+        }
+        @include xmobile{
+            width: 90%;
+        }
     }
-    &__wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        z-index: 3;
-        
+    &__grid{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
+        height: px-to-rem(800);
+        width: 84%;
+        border: 4px solid red;
+        bottom: px-to-rem(10);
+        @include xmobile{
+            height: px-to-rem(1500);
+            width: 90%;
+        }
     }
-    &__content{
-        display: inline-block;
-        transform: translateY(250px);
+    &__left{
+
         
+        @include xdesktop{
+            // @include move($display : inline-block, $translateY : px-to-rem(100));
+            padding-top: px-to-rem(100);
+        }
+        @include xtablet{
+            padding-top: px-to-rem(100);
+        }
+        @include xmobile{
+            grid-column: span 2;
+            
+        }
         .title{
-            display: inline-block;
-            font-size: 3rem;
-            font-weight: 700;
             color: black;
-        }
-        .explain{
-            display: inline-block;
-            font-size: 18px;
-            color: rgb(163, 151, 151);
-            
-        }
-        .feature-row{
-            display: flex;
-            gap: 40px;
-            // margin-bottom: 20px;
-        }
-        .feature{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            min-width: 280px;          
-            .detail{
-                display: flex;
-                color: $primary-color;
-                font-size: 20px;
+            font-family: $primary-bold;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            @include xtablet{
+                font-size: 2.5rem;
             }
-            .icon{
-                margin-right: 10px;
+            @include xmobile{
+                font-size: 2rem;
             }
-            
+            @media (max-width : 380px) {
+                font-size: 1.75rem;
+            }
         }
-        .box{
-            background-color: rgb(66, 184, 243);
-            height: 80px;
-            width: 450px;
-            border-radius: 20px;
-            font-size : 18px;
-            padding: 13px 40px;
-            .contact{
+        .caption{
+            color: $neutural-grey;
+            margin-bottom: 2.5rem;
+        }
+        .function-grid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap : 0.5rem 1rem;
+            margin-bottom: 2rem;
+            height: px-to-rem(150);
+            width: 80%;
+            // border: 4px solid green;
+            @include xmobile{
+                grid-template-columns: 1fr;
+            }
+        }
+        .function-list{
+            color: $primary-color;
+            font-weight: 700;
+            &::before{
+                content: '';
                 display: inline-block;
-                border-bottom: 2px solid $white;
-                margin-bottom: -2px ;/* tạo gạch chân */    
-                font-size: 20px;
-                font-weight: 500;
+                height: 1rem;
+                width: 1rem;
+                background-image: url(../assets/icon/Ic_24-Check.svg);
+                margin-right: px-to-rem(10);
+            }   
+        }
+        .btn{
+            width: 52%;
+            height: px-to-rem(70);
+            background-color: $blue;
+            border-radius: 24px;
+            color: $white;
+            padding: 1rem;
+            padding-top: 0.57rem;
+            padding-left: 1.5rem;
+            @include xmobile{
+                width: 90%;
+            }
+            span{
+                font-size: px-to-rem(20);
+                // font-family: 800;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 4px;
             }
         }
-        
     }
-    &__image{
-       display: inline-block;
-       transform: translateY(200px);
-    }
+    &__right{
+        @include xmobile{
+            grid-column: span 2;
+            order: -1;
+        }
+        img{
+            width: 100%;
+            
+        }
+    } 
 }
 

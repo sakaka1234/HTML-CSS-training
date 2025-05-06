@@ -97,23 +97,6 @@
       background: linear-gradient(to bottom,$primary-color,$divider-color,$primary-color);
     }
   }
-  .newdeviderX{
-    @include xmobile{
-      content: '';
-      @include move($display : inline-block , $translateY : px-to-rem(-124),$translateX : px-to-rem(-90));
-      height: 0.2rem;
-      width: px-to-rem(300);
-      background-image: url(../assets/icon/lineX.png);
-    }
-  }
-  .newdeviderY{
-    @include xmobile{
-      content: '';
-      @include move($display : inline-block , $translateY : px-to-rem(-200));
-      height: px-to-rem(300);
-      width: 0.2rem;
-      background-image: url(../assets/icon/lineY.png);
-    }
-  }
+  
 }
 
