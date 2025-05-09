@@ -40,8 +40,9 @@
         bottom: px-to-rem(10);
         @include xmobile{
             min-height: px-to-rem(1070);
-            
+            bottom: px-to-rem(0);
             width: 90%;
+            
         }
         
     }
