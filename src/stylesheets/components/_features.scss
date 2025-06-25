@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+.feature-bars{
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+    .feature-item{
+        display: flex;
+        align-items: center;
+    }
+    &__icon{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: $light-blue;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        color: $accent-color;
+    }
+    &__content{
+        h3{
+            font-size: 1rem;
+            color: $primaryColor;
+            font-weight: 600;
+        }
+    }
+    @include responsive($desktop){
+        flex-wrap: wrap;
+        gap: 20px;
+        .feature-item{
+            width: 48%;
+        }        
+    }
+    @include responsive($tablet){
+        .feature-item{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+}
