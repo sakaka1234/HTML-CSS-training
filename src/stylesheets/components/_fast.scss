@@ -1,0 +1,119 @@
+@use "../abstracts" as *;
+.fast {
+  &__container {
+    height: px-to-rem(1000);
+    background-color: $white;
+    position: relative;
+    padding: 4rem;
+    border: 2px solid red;
+  }
+  &__modern {
+    height: 100%;
+    width: 100%;
+    background-color: $primary-color;
+    position: relative;
+    border-radius: 24px;
+  }
+  &__vertical {
+    top: 50%;
+    position: absolute;
+    height: 70%;
+    width: 2rem;
+    transform: translateY(-50%);
+    background-color: $white;
+    &__left {
+      left: 0;
+      clip-path: polygon(0 0, 100% 6%, 100% 95%, 0 100%);
+    }
+    &__right {
+      right: 0;
+      clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 95%);
+    }
+  }
+  &__content {
+    width: 86%;
+    border: 4px solid red;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem;
+    gap: 2rem;
+    @include flex($direction: column);
+    .title {
+      all: unset;
+      @include flex();
+      .left {
+        font-family: $primary-font;
+        color: $white;
+        font-size: 3rem;
+        font-weight: 700;
+        border: 4px solid green;
+        @include xdesktop {
+          width: 50%;
+          padding-right: 7rem;
+        }
+      }
+      .right {
+        width: 50%;
+        padding-top: 4rem;
+        padding-left: 6rem;
+        font-family: $primary-font;
+        color: $neutural-grey-3;
+        border: 4px solid green;
+        @include xdesktop {
+          padding-right: 6rem;
+        }
+      }
+    }
+    .horizontal_line {
+      all: unset;
+      @include flex();
+      background: linear-gradient(
+        to right,
+        $primary-color,
+        $blue-border,
+        $primary-color
+      );
+      height: 0.05rem;
+      width: 100%;
+      @include xmobile {
+        display: none;
+      }
+    }
+  }
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @include xmobile {
+      grid-template-columns: 1fr;
+    }
+    .feature_item {
+      all: unset;
+      @include flex($align: center, $gap: 2.5rem);
+      padding-right: 10rem;
+      border: 5px solid brown;
+      .img {
+        all: unset;
+        display: flex;
+        height: 3rem;
+        width: 3rem;
+      }
+      .text {
+        all: unset;
+        @include flex($direction: column, $align: flex-start);
+        .title {
+          color: $white;
+          font-family: $primary-font;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+        .explain {
+          color: $neutural-grey-3;
+        }
+      }
+    }
+  }
+}
