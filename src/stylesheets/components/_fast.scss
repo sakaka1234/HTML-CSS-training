@@ -1,18 +1,17 @@
 @use "../abstracts" as *;
 .fast {
   &__container {
-    height: px-to-rem(1000);
+    min-height: px-to-rem(800);
     background-color: $white;
     position: relative;
     padding: 4rem;
-    border: 2px solid red;
   }
   &__modern {
-    height: 100%;
     width: 100%;
     background-color: $primary-color;
     position: relative;
     border-radius: 24px;
+    padding: 2rem 0;
   }
   &__vertical {
     top: 50%;
@@ -21,6 +20,9 @@
     width: 2rem;
     transform: translateY(-50%);
     background-color: $white;
+    @include xmobile {
+      display: none;
+    }
     &__left {
       left: 0;
       clip-path: polygon(0 0, 100% 6%, 100% 95%, 0 100%);
@@ -32,26 +34,37 @@
   }
   &__content {
     width: 86%;
-    border: 4px solid red;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+
+    // height: 100%;
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
     padding: 2rem;
     gap: 2rem;
+    margin: 0 auto;
     @include flex($direction: column);
     .title {
       all: unset;
       @include flex();
+      @include xmobile {
+        @include flex($direction: column);
+      }
       .left {
         font-family: $primary-font;
         color: $white;
         font-size: 3rem;
         font-weight: 700;
-        border: 4px solid green;
+
         @include xdesktop {
           width: 50%;
           padding-right: 7rem;
+        }
+        @include xtablet {
+          width: 50%;
+        }
+        @include xmobile {
+          font-size: 2rem;
+          text-align: center;
         }
       }
       .right {
@@ -60,9 +73,13 @@
         padding-left: 6rem;
         font-family: $primary-font;
         color: $neutural-grey-3;
-        border: 4px solid green;
+
         @include xdesktop {
           padding-right: 6rem;
+        }
+        @include xmobile {
+          width: 100%;
+          padding: 1rem;
         }
       }
     }
@@ -86,34 +103,48 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    column-gap: clamp(2rem, 12rem, 12rem);
+    row-gap: 2rem;
     @include xmobile {
       grid-template-columns: 1fr;
     }
     .feature_item {
       all: unset;
       @include flex($align: center, $gap: 2.5rem);
-      padding-right: 10rem;
-      border: 5px solid brown;
-      .img {
-        all: unset;
-        display: flex;
-        height: 3rem;
-        width: 3rem;
+      padding-right: 4rem;
+
+      @include xmobile {
+        @include flex($direction: column, $align: center);
+        padding: 1rem;
       }
       .text {
         all: unset;
         @include flex($direction: column, $align: flex-start);
+        @include xmobile {
+          text-align: center;
+        }
+
         .title {
           color: $white;
           font-family: $primary-font;
           font-size: 1.5rem;
           font-weight: 700;
+          @include xmobile {
+            margin: 0 auto;
+          }
         }
         .explain {
           color: $neutural-grey-3;
         }
       }
+    }
+  }
+  .feature_img {
+    width: 5rem;
+    height: 5rem;
+    @include xmobile {
+      width: 4.5rem;
+      height: 4.5rem;
     }
   }
 }
