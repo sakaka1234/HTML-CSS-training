@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+.homepro {
+  &__container {
+    background-color: $white;
+    min-height: px-to-rem(800);
+    position: relative;
+    padding: 2rem;
+  }
+  .parttern {
+    min-height: px-to-rem(600);
+    @include flex($align: center);
+    border: 4px solid red;
+    position: relative;
+    margin: 0 auto;
+    @include xdesktop {
+      width: 90%;
+    }
+  }
+  .container_img {
+    @include flex();
+    width: 45%;
+    border: 4px solid greenyellow;
+  }
+  .image {
+    width: 43rem;
+    height: auto;
+    border: 4px solid green;
+    position: relative;
+  }
+  .container_content {
+    @include flex($direction: column);
+    width: 65%;
+  }
+  .title {
+    font-size: 3rem;
+    font-family: $primary-font;
+    font-weight: 700;
+  }
+  .content {
+    font-family: $primary-font;
+    @include flex();
+  }
+  .list {
+    font-family: $primary-font;
+    color: $neutural-grey-3;
+    font-weight: 700;
+  }
+  .group_content {
+    @include flex();
+  }
+}
