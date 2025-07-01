@@ -1,0 +1,91 @@
+@use "../abstracts" as *;
+.customer {
+  &__container {
+    min-height: px-to-rem(700);
+    background-color: $white;
+    position: relative;
+    @include flex($align: center, $justify: center);
+    padding: 1rem;
+  }
+  .content {
+    width: 60%;
+    min-height: px-to-rem(500);
+    position: relative;
+
+    @include flex($direction: column, $align: center);
+    text-align: center;
+    @include xmobile {
+      padding-bottom: 0.5rem;
+      width: 90%;
+    }
+  }
+  .title {
+    color: $black;
+    font-family: $primary-bold;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    @include xtablet {
+      font-size: 2.5rem;
+    }
+    @include xmobile {
+      font-size: 2rem;
+    }
+  }
+  .image {
+    height: auto;
+    .trustpilot {
+      width: 11rem;
+    }
+    .profile {
+      width: 12rem;
+      margin-bottom: 3rem;
+    }
+    .pagenation {
+      width: 6rem;
+      margin: 0 auto;
+      @include xmobile {
+        width: 7rem;
+      }
+    }
+  }
+  .horizontal_line {
+    width: 55%;
+    height: 0.15rem;
+    background: linear-gradient(to right, $white, $neutural-grey-2, $white);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .text {
+    font-family: $primary-font;
+    color: $neutural-grey;
+    max-width: 53%;
+    margin-bottom: 2rem;
+    @include xmobile {
+      max-width: 100%;
+    }
+  }
+  .btn-left {
+    position: absolute;
+    width: 2.3rem;
+    height: auto;
+    left: 1rem;
+    bottom: 12rem;
+    @include xmobile {
+      width: 2.7rem;
+      bottom: 0;
+      left: 2rem;
+    }
+  }
+  .btn-right {
+    position: absolute;
+    width: 2.3rem;
+    height: auto;
+    right: 1rem;
+    bottom: 12rem;
+    @include xmobile {
+      bottom: 0;
+      right: 2rem;
+      width: 2.7rem;
+    }
+  }
+}
