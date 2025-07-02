@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+.info {
+  &__container {
+    min-height: px-to-rem(700);
+    background-color: $white;
+    position: relative;
+    padding: 2rem;
+    @include flex($align: center, $justify: center);
+  }
+  &__wrapper {
+    width: 83%;
+    min-height: px-to-rem(600);
+    border: 4px solid red;
+    @include flex($direction: column, $align: center, $gap: 1.5rem);
+    text-align: center;
+    position: relative;
+  }
+  .title {
+    font-family: $primary-bold;
+    color: $black;
+    font-size: 2.8rem;
+  }
+  .explain {
+    font-family: $primary-font;
+    font-size: 1.3rem;
+    color: $neutural-grey;
+    width: 40%;
+  }
+  .contain_card {
+    width: 100%;
+    @include flex($justify: center, $gap: 2.4rem);
+    text-align: left;
+    min-height: px-to-rem(100);
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+  }
+  .card {
+    display: flex;
+    flex: 1 1 calc(33.333% - 2.4rem);
+    gap: 0.8rem;
+    min-height: auto;
+
+    flex-direction: column;
+    .image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+    .date {
+      color: $neutural-grey;
+      display: block;
+      font-size: 1.2rem;
+    }
+    .title {
+      color: $black;
+      font-size: 2rem;
+      display: block;
+    }
+    .explain {
+      width: 100%;
+      color: $neutural-grey;
+    }
+  }
+  .contain_function {
+    margin-top: 0.7rem;
+    @include flex($gap: 1.3rem);
+  }
+  .function {
+    background-color: $light-grey;
+    border-radius: 24px;
+    color: $neutural-grey;
+    min-height: 2rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    @include flex($align: center, $justify: center);
+  }
+  .view {
+    color: $blue;
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    &::after {
+      content: "";
+      width: 0.5rem;
+      height: 0.9rem;
+      display: inline-block;
+      margin-left: 1rem;
+      background-image: url(../assets/icon/viewmore.svg);
+    }
+  }
+}
