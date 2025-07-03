@@ -10,21 +10,30 @@
   &__wrapper {
     width: 83%;
     min-height: px-to-rem(600);
-    border: 4px solid red;
+    // border: 4px solid red;
     @include flex($direction: column, $align: center, $gap: 1.5rem);
     text-align: center;
     position: relative;
+    @include xmobile {
+      width: 97%;
+    }
   }
   .title {
     font-family: $primary-bold;
     color: $black;
     font-size: 2.8rem;
+    @include xmobile {
+      font-size: 2.45rem;
+    }
   }
   .explain {
     font-family: $primary-font;
     font-size: 1.3rem;
     color: $neutural-grey;
     width: 40%;
+    @include xmobile {
+      width: 100%;
+    }
   }
   .contain_card {
     width: 100%;
@@ -33,6 +42,9 @@
     min-height: px-to-rem(100);
     margin-top: 1rem;
     margin-bottom: 6rem;
+    @include xmobile {
+      @include flex($direction: column);
+    }
   }
   .card {
     display: flex;
@@ -55,6 +67,9 @@
       color: $black;
       font-size: 2rem;
       display: block;
+      @include xmobile {
+        font-size: 1.5rem;
+      }
     }
     .explain {
       width: 100%;
@@ -71,7 +86,7 @@
     color: $neutural-grey;
     min-height: 2rem;
     font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.1rem;
     font-weight: 600;
     @include flex($align: center, $justify: center);
   }
@@ -91,6 +106,23 @@
       display: inline-block;
       margin-left: 1rem;
       background-image: url(../assets/icon/viewmore.svg);
+    }
+    @include xmobile {
+      font-size: 1.4rem;
+      bottom: 0.5rem;
+    }
+  }
+  #maintenance {
+    @include xmobile {
+      display: none;
+    }
+  }
+  #dot3 {
+    @include xdesktop {
+      display: none;
+    }
+    @include xtablet {
+      display: none;
     }
   }
 }
