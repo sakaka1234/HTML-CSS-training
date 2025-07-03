@@ -58,8 +58,9 @@
   .text {
     font-family: $primary-font;
     color: $neutural-grey;
-    max-width: 53%;
+    max-width: 63%;
     margin-bottom: 2rem;
+    font-size: 1.2rem;
     @include xmobile {
       max-width: 100%;
     }
