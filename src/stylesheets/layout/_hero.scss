@@ -1,154 +1,158 @@
-@use '../abstracts/mixins' as *;
-@use '../abstracts/variables' as *;
-@use '../abstracts/functions' as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
 .hero {
-    background-color: $primary-color;
-     
-    &__wrapper{
-      width: 100%;
-      @include flex($justify : center);
-      position: relative;
-      padding: 0 px-to-rem(50);
-      height: px-to-rem(820);
-      @include xmobile{
-        height: px-to-rem(650);
-      }
-    }
-    
-    &__image{
-      
-      @include xmobile{
-        display: none;
-      }
-      @include xtablet{
-        display: none;
-      }
-      .worker-image-left{
-        position: absolute;
-        left: px-to-rem(10);
-        width: px-to-rem(400);
-        // border: 4px solid green;
-        @include move($display : inline-block , $translateY : px-to-rem(-50)); 
-      }
-      .worker-image-right{
-        position: absolute;
-        right : px-to-rem(10);
-        width: px-to-rem(400);
-        // border: 4px solid green;
-        @include move($display : inline-block , $translateY : px-to-rem(-50)); 
-      }
-    }
-    &__devider{
-      .newdeviderX{
-        @include xmobile{
-          content: '';
-          @include move($display : inline-block , $translateY : px-to-rem(275),$translateX : px-to-rem(0));
-          height: 0.15rem;
-          width: px-to-rem(300);
-          background-image: url(../assets/icon/lineX.png);
-        }
-      }
-      .newdeviderY{
-        @include xmobile{
-          content: '';
-          @include move($display : inline-block , $translateY : px-to-rem(390) , $translateX : px-to-rem(-146));
-          height: px-to-rem(240);
-          width: 0.1rem;
-          background-image: url(../assets/icon/lineY.png);
-          
-        }
-      }
-    }
-    &__content{
-      display: flex;
-      flex-direction: column;
-      // justify-content: center;
-      align-items: center;
-      position: absolute;
-      top : px-to-rem(200);
-      @include xmobile{
-        top: px-to-rem(20);
-        
-      }
-      @include xtablet{
-        top : px-to-rem(150);
-      }
-      .benefit{
-        color: $grey;
-        display: flex;
-        gap: px-to-rem(20);
-        font-weight: 700;
+  background-color: $primary-color;
 
-        // margin-bottom: px-to-rem(30);
-        .dot{
-          background-color: $grey;
-          height: px-to-rem(5);
-          width: px-to-rem(5);
-          border-radius: 50%;
-          @include move($display : inline-block, $translateY : px-to-rem(11));
-        }
+  &__wrapper {
+    width: 100%;
+    @include flex($justify: center);
+    position: relative;
+    padding: 0 px-to-rem(50);
+    height: px-to-rem(820);
+    @include xmobile {
+      height: px-to-rem(650);
+    }
+  }
+
+  &__image {
+    @include xmobile {
+      display: none;
+    }
+    @include xtablet {
+      display: none;
+    }
+    .worker-image-left {
+      position: absolute;
+      left: px-to-rem(10);
+      width: px-to-rem(400);
+      // border: 4px solid green;
+      @include move($display: inline-block, $translateY: px-to-rem(-50));
+    }
+    .worker-image-right {
+      position: absolute;
+      right: px-to-rem(10);
+      width: px-to-rem(400);
+      // border: 4px solid green;
+      @include move($display: inline-block, $translateY: px-to-rem(-50));
+    }
+  }
+  &__devider {
+    .newdeviderX {
+      @include xmobile {
+        content: "";
+        @include move(
+          $display: inline-block,
+          $translateY: px-to-rem(275),
+          $translateX: px-to-rem(0)
+        );
+        height: 0.15rem;
+        width: px-to-rem(300);
+        background-image: url(../assets/icon/lineX.png);
       }
-      .title{
-        color : $white;
-        font-weight: 900;
-        font-family: $primary-bold;
-        font-size: px-to-rem(50);
-        
-        @include flex($direction : column, $align : center);
-        @include xmobile{
-          font-size: px-to-rem(35);
-          font-family: $primary-font;
-        }
+    }
+    .newdeviderY {
+      @include xmobile {
+        content: "";
+        @include move(
+          $display: inline-block,
+          $translateY: px-to-rem(390),
+          $translateX: px-to-rem(-146)
+        );
+        height: px-to-rem(240);
+        width: 0.1rem;
+        background-image: url(../assets/icon/lineY.png);
       }
-      .guarantee{
-        display: flex;
-        gap: px-to-rem(50);
-        margin-bottom: px-to-rem(50);
-        @media (max-width : 386px) {
-          gap : px-to-rem(20);
-        }
-        &__text{
-          color: $blue;
-          &::before{
-            content: '';
-            display: inline-block;
-            width: px-to-rem(15.5);
-            height: px-to-rem(15);
-            background-image: url(../assets/icon/hero_check.svg);
-            margin-right: px-to-rem(10);
-            @include xmobile{
-              width: px-to-rem(17);
-              height: px-to-rem(15.6);
-            }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: px-to-rem(200);
+    @include xmobile {
+      top: px-to-rem(20);
+    }
+    @include xtablet {
+      top: px-to-rem(150);
+    }
+    .benefit {
+      color: $grey;
+      display: flex;
+      gap: px-to-rem(20);
+      font-weight: 700;
+
+      // margin-bottom: px-to-rem(30);
+      .dot {
+        background-color: $grey;
+        height: px-to-rem(5);
+        width: px-to-rem(5);
+        border-radius: 50%;
+        @include move($display: inline-block, $translateY: px-to-rem(11));
+      }
+    }
+    .title {
+      color: $white;
+      font-weight: 900;
+      font-family: $primary-bold;
+      font-size: px-to-rem(50);
+
+      @include flex($direction: column, $align: center);
+      @include xmobile {
+        font-size: px-to-rem(35);
+        font-family: $primary-font;
+      }
+    }
+    .guarantee {
+      display: flex;
+      gap: px-to-rem(50);
+      margin-bottom: px-to-rem(50);
+      @media (max-width: 386px) {
+        gap: px-to-rem(20);
+      }
+      &__text {
+        color: $blue;
+        &::before {
+          content: "";
+          display: inline-block;
+          width: px-to-rem(15.5);
+          height: px-to-rem(15);
+          background-image: url(../assets/icon/hero_check.svg);
+          margin-right: px-to-rem(10);
+          @include xmobile {
+            width: px-to-rem(17);
+            height: px-to-rem(15.6);
           }
         }
       }
-      .btn{
-        display: flex;
-        width:  px-to-rem(200);
-        height: px-to-rem(60);
-        border-radius: 60px;
-        background-color: $blue;
-        position: relative;
-        padding: px-to-rem(5.4) 0;
-        .text{
-          color: $white;
-          position: absolute;
-          left: px-to-rem(14);
-          font-weight: 700;
-          font-size: px-to-rem(20);
-          top: px-to-rem(12);
-        }
-        .icon{
-          width: px-to-rem(50);
-          height: px-to-rem(50);
-          border-radius: 50%;
-          background-color: $white;
-          position: absolute;
-          right: 0.5rem;
-          @include flex($align : center,$justify : center);
-        }
+    }
+    .btn {
+      display: flex;
+      width: px-to-rem(200);
+      height: px-to-rem(60);
+      border-radius: 60px;
+      background-color: $blue;
+      position: relative;
+      padding: px-to-rem(5.4) 0;
+      .text {
+        color: $white;
+        position: absolute;
+        left: px-to-rem(14);
+        font-weight: 700;
+        font-size: px-to-rem(20);
+        top: px-to-rem(12);
+      }
+      .icon {
+        width: px-to-rem(50);
+        height: px-to-rem(50);
+        border-radius: 50%;
+        background-color: $white;
+        position: absolute;
+        right: 0.5rem;
+        @include flex($align: center, $justify: center);
       }
     }
-
+  }
 }

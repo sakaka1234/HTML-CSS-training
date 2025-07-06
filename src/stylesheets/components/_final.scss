@@ -1,0 +1,147 @@
+@use "../abstracts" as *;
+.final {
+  &__container {
+    min-height: px-to-rem(640);
+    background-color: $primary-color;
+    position: relative;
+    @include flex($justify: flex-end);
+    @include xtablet {
+      min-height: px-to-rem(580);
+    }
+    @include xmobile {
+      @include flex($justify: center);
+    }
+  }
+  &__wrapper {
+    min-height: px-to-rem(640);
+    width: 93%;
+
+    @include flex($gap: 2rem);
+    @include xtablet {
+      min-height: px-to-rem(580);
+    }
+    @include xmobile {
+      @include flex($direction: column, $gap: 3rem);
+      width: 100%;
+    }
+  }
+  .left {
+    @include flex($direction: column);
+    width: calc(45% - 1rem);
+
+    .top_left {
+      all: unset;
+      width: 70%;
+      background-color: $white;
+      height: 2rem;
+      clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
+      margin-bottom: 7rem;
+      @include xmobile {
+        margin-bottom: 3rem;
+      }
+    }
+    .title {
+      all: unset;
+      color: $white;
+      font-family: $primary-bold;
+      font-size: 4rem;
+      line-height: 1.3; /* Giảm khoảng cách giữa các dòng */
+      display: inline-block;
+      width: 85%;
+      margin-bottom: 1rem;
+      @include xtablet {
+        width: 100%;
+        font-size: 3rem;
+      }
+      @include xmobile {
+        width: 90%;
+        font-size: 2rem;
+      }
+    }
+    @include xmobile {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .contain_function {
+    @include flex($gap: 2rem);
+    margin-bottom: 2rem;
+    @include xmobile {
+      gap: 1rem;
+    }
+  }
+  .function {
+    color: $blue;
+    font-size: 1.2rem;
+    &::before {
+      content: "";
+      width: px-to-rem(15.5);
+      height: px-to-rem(15);
+      background-image: url(../assets/icon/hero_check.svg);
+      margin-right: 1rem;
+      display: inline-block;
+      @include xmobile {
+        margin-right: 0.5rem;
+      }
+    }
+    @include xmobile {
+      font-size: 1rem;
+    }
+  }
+  .btn {
+    display: flex;
+    width: px-to-rem(210);
+    height: px-to-rem(60);
+    border-radius: 60px;
+    background-color: $blue;
+    position: relative;
+    padding: px-to-rem(5.4) 0;
+    .text {
+      color: $white;
+      position: absolute;
+      left: px-to-rem(14);
+      font-weight: 700;
+      font-size: px-to-rem(20);
+      top: px-to-rem(12);
+      margin-left: 0.5rem;
+    }
+    .icon {
+      width: px-to-rem(50);
+      height: px-to-rem(50);
+      border-radius: 50%;
+      background-color: $white;
+      position: absolute;
+      right: 0.5rem;
+      @include flex($align: center, $justify: center);
+    }
+  }
+  .right {
+    width: calc(55% - 1rem);
+    height: auto;
+
+    @include flex();
+    @include xmobile {
+      width: 100%;
+    }
+  }
+  .image {
+    width: 100%;
+    height: auto;
+    align-self: flex-end;
+  }
+  #img_desktop {
+    @include xmobile {
+      display: none;
+    }
+  }
+  #img_mobile {
+    @include xdesktop {
+      display: none;
+    }
+    @include xtablet {
+      display: none;
+    }
+  }
+}
