@@ -4,12 +4,17 @@
   <meta charset="UTF-8">
   <title>HTML with Sass and Includes</title>
   <!-- Sử dụng SCSS -->
+  <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+/>
   <link rel="stylesheet" href="../stylesheets/main.scss">
 </head>
 <body>
 
   <!-- Include header -->
+  <include src = "./layout/header.html"></include>
   <include src="./sections/section1.html"></include>
-
+  <include src="./sections/section2.html"></include>
 </body>
 </html>

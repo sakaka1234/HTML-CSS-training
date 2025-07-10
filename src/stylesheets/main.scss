@@ -1,15 +1,6 @@
 
-@use './abstracts/mixins' as *;
-@use './abstracts/variables' as *;
-@use './base/reset' as *;
-@use './base/utilities' as *;
-@use './base/typography' as *;
-@use './components/buttons' as *;
-@use './components/logo' as *;
-@use './components/features' as *;
-@use './layout/container' as *;
-@use './layout/header' as *;
-@use './layout/hero' as *;
-@use './pages/home.scss' as *;
-@use './themes/theme' as *;
-@use './vendors/bootstrap' as *;
+@use "abstracts";
+@use "base";
+@use "components";
+@use "layout/" as *;
+

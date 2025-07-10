@@ -1,0 +1,61 @@
+@use './variables' as *;
+
+    @mixin xdesktop{
+        @media (min-width : $desktop) {
+            @content;
+        }
+    }
+    @mixin xmobile{
+        @media (min-width : $mobile) and (max-width : #{$tablet - 1px}){
+            @content;
+        }
+    }
+    @mixin xtablet{
+        @media (min-width : $tablet) and (max-width : #{$desktop - 1px}){
+            @content;
+        }
+    }
+    @mixin flex($direction: false, $justify: false, $align: false, $wrap: false , $gap : false) {
+        display: flex;
+        @if direction{
+            flex-direction: $direction;
+        }
+        @if justify{
+            justify-content: $justify;
+        }
+        @if align{
+            align-items: $align;
+
+        }
+        @if wrap{
+            flex-wrap: $wrap;
+        }
+        @if gap {
+            gap : $gap;
+        }
+      }
+
+      @mixin move($display: false, $translateX: false, $translateY: false) {
+        // Chỉ áp dụng display nếu có truyền giá trị
+        @if $display != false {
+          display: $display;
+        }
+        // Tạo biến transform từ các giá trị truyền vào
+        $x: 0;
+        $y: 0;
+      
+        @if $translateX != false {
+          $x: $translateX;
+        }
+      
+        @if $translateY != false {
+          $y: $translateY;
+        }
+      
+        // Chỉ áp dụng transform nếu có ít nhất một giá trị khác 0
+        @if $x != 0 or $y != 0 {
+          transform: translate(#{$x}, #{$y});
+        }
+      }
+      
+    

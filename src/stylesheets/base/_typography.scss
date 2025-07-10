@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+@font-face {
+    font-family: "PlusJakartaSansRegular";
+    src: url("../assets/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+}
+@font-face{
+    font-family: "PlusJakartaSansBold";
+    src : url("../assets/fonts/PlusJakartaSans-Bold.ttf") format("truetype"); 
+}
