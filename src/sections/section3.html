@@ -1,79 +1,72 @@
 <section class="services">
-    <div class="services__container">
-        <div class="services__grid">
-            <div class="services__content">
-                <span class="title">Our services</span>
-                <div class="explain">
-                    <span>You have problems with leaking pipes, broken tiles, lost keys or</span>
-                    <span>want to tidy up the trees around you, of course you need our help!</span>
-                </div>
-            </div>
-            <div class="services__detail">
-                <div class="image"><img src="../assets/icon/Ic-Plumbing-Filled.svg"> </div>
-                <div class="title">Plumbing services</div>
-                <div class="explain">
-                    <span>Drain pipe leaking, pipe clogged,</span>
-                    <span>replace the pipe line</span>
-                </div>
-            </div>
-            <div class="services__detail">
-                <div class="image"><img src="../assets/icon/Ic_Roof_Filled.svg"></div>
-                <div class="title">Roofling repair</div>
-                <div class="explain">
-                    <span>Roof leaks, tile replacement, roof</span>
-                    <span>cleaning and maintenance</span>
-                </div>
-            </div>
-            <div class="services__detail">
-                <div class="image"><img src="../assets/icon/Ic_Wall-Filled.svg"></div>
-                <div class="title">Mold Removal</div>
-                <div class="explain">
-                    <span>Removing and cleaning mildew</span>
-                    <span>Restoration and Prevention</span>
-                </div>
-            </div>
-            <div class="services__detail">
-                <div class="image"><img src="../assets/icon/Ic_Wood-Tree-Filled.svg"></div>
-                <div class="title">Tree Trimming</div>
-                <div class="explain">
-                    <span>Trimming and cleaning, Deadwood</span>
-                    <span>removal, Tree shaping</span>
-                </div>
-            </div>
-            <div class="services__detail">
-                <div class="image"><img src="../assets/icon/Ic_Repair_Filled.svg"></div>
-                <div class="title">Appliance Repair</div>
-                <div class="explain">
-                    <span>repair of washing machines</span>
-                    <span>refrigerators, Air conditioner, etc</span>
-                </div>
-            </div>
-            <div class="services__detail">
-                <div class="image"><img src="../assets/icon/Ic_Bathroom-Filled.svg"></div>
-                <div class="title">Bathroom Remodelling</div>
-                <div class="explain">
-                    <span>Design and Consulting</span>
-                    <span>installation, Repairing, tile repair</span>
-                </div>
-            </div>
-            <div class="services__detail">
-                <div class="image"><img src="../assets/icon/Ic_Door-Filled.svg"></div>
-                <div class="title">Locksmith</div>
-                <div class="explain">
-                    <span>Lock Installation and Repair</span>
-                    <span>Duplication, Lock Rekeying</span>
-                </div>
-            </div>
-            <div class="services__detail">
-                <div class="services__contact">
-                    <span class="title">More services?</span>
-                    <div class="explain">
-                        <span>You can tell us what you need and</span>
-                        <span>we can help!</span>
-                    </div>
-                    <div class="btn">Call Us Now</div>
-                </div>
-            </div>
+  <div class="services__container">
+    <div class="services__grid">
+      <div class="services__content">
+        <span class="title">Our services</span>
+        <div class="explain">
+          <span
+            >You have problems with leaking pipes, broken tiles, lost keys
+            or</span
+          >
+          <span
+            >want to tidy up the trees around you, of course you need our
+            help!</span
+          >
         </div>
+      </div>
+      <include
+        src="./components/function_services.html"
+        locals='{
+                "services":[
+                    {
+                        "icon": "Ic-Plumbing-Filled",
+                        "title": "Plumbing services",
+                        "desc": ["Drain pipe leaking, pipe clogged", "replace the pipe line"]
+                    },
+                    {
+                        "icon": "Ic_Roof_Filled",
+                        "title": "Roofling repair",
+                        "desc": ["Roof leaks, tile replacement,", "roof cleaning and maintenance"]
+                    },
+                    {
+                        "icon": "Ic_Wall-Filled",
+                        "title": "Mold Removal",
+                        "desc": ["Removing and cleaning mildew", "Restoration and Prevention"]
+                    },
+                    {
+                        "icon": "Ic_Wood-Tree-Filled",
+                        "title": "Tree Trimming",
+                        "desc": ["Trimming and cleaning, Deadwood", "removal, Tree shaping"]
+                    },
+                    {
+                        "icon": "Ic_Repair_Filled",
+                        "title": "Appliance Repair",
+                        "desc": ["repair of washing machines", "refrigerators, Air conditioner, etc"]
+                    },
+                    {
+                        "icon": "Ic_Bathroom-Filled",
+                        "title": "Bathroom Remodelling",
+                        "desc": ["Design and Consulting", "installation, Repairing, tile repair"]
+                        },
+                    {
+                        "icon": "Ic_Door-Filled",
+                        "title": "Locksmith",
+                        "desc": ["Lock Installation and Repair", "Duplication, Lock Rekeying"]
+                    }
+                ]
+            }'
+      ></include>
+
+      <div class="services__detail">
+        <div class="services__contact">
+          <span class="title">More services?</span>
+          <div class="explain">
+            <span>You can tell us what you need and</span>
+            <span>we can help!</span>
+          </div>
+          <div class="btn">Call Us Now</div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
