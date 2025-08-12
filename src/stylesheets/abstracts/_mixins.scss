@@ -15,6 +15,10 @@
             @content;
         }
     }
+    @mixin center(){
+        justify-content: center;
+        align-items: center;
+    }
     @mixin flex($direction: false, $justify: false, $align: false, $wrap: false , $gap : false) {
         display: flex;
         @if direction{

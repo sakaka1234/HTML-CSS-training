@@ -1,0 +1,160 @@
+@use '../abstracts' as *;
+.services{
+    &__container{
+        height: px-to-rem(1000);
+        background-color: $white;
+        position: relative;
+        @include xmobile{
+            height: px-to-rem(2000);
+        }
+        
+    }
+    &__grid{
+        position : absolute;
+        
+        left : 50%;
+        top: 4rem;
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        height: px-to-rem(900);
+        width: 84%;
+        padding: 2rem;
+        row-gap: 0rem;
+        @include xdesktop{
+            padding-bottom: 7rem;
+        }
+        @include xmobile{
+            height: px-to-rem(2000);
+            width: 90%;
+            top: 0rem;
+        }
+    }
+    &__content{
+        grid-column: span 4;
+        width: 100%;
+        text-align: center;
+        
+        span{
+            display: inline-block;
+        }
+        .title{
+            font-size: 3rem;
+            font-family: $primary-bold;
+            color: black;
+            margin-bottom: 1rem;
+            @include xmobile{
+                font-size: 1.5rem;
+            }
+        }
+        .explain{
+            color: $neutural-grey;
+            
+            @include xdesktop{
+                span{
+                    display: block;
+                }
+            }
+            @include xtablet{
+                span{
+                    display: block;
+                }
+            }
+            @include xmobile{
+                span{
+                    display: inline;
+                }
+            }
+        }
+    }
+    &__detail{
+        @include flex($direction : column, $gap : 0.5rem);
+        grid-column: span 1;
+        
+        
+        max-height: px-to-rem(250);
+        @include xmobile{
+            grid-column: span 4;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .image{
+            @include flex($justify : center , $align : center);
+            height: px-to-rem(60);
+            width: px-to-rem(60);
+            border-radius: 20px;
+            background-color: $primary-color;
+            margin-top: 2rem;
+            margin-left: 1.5rem;
+            @include xmobile{
+                height: px-to-rem(70);
+                width: px-to-rem(70);
+            }
+        }
+        .title{
+            font-size : 1.5rem;
+            font-family: $primary-bold;
+            color: black;
+            margin-left: 1.5rem;
+        }
+        .explain{
+            color: $neutural-grey;
+            margin-left: 1.5rem;
+            @include xdesktop{
+                span{
+                    display: block;
+                }
+            }
+        }
+        
+    }
+    &__contact{
+        width: 100%;
+        height: px-to-rem(250);
+        border-radius: 24px;
+        background-color: $blue;
+        padding-top: 1.75rem;
+        @include flex($direction : column,$align : center);
+        @include xmobile{
+            grid-column: span 4;
+            height: px-to-rem(230);
+            margin-top: 1.7rem;
+        }
+        .title{
+            
+            font-family: $primary-bold;
+            color: $white;
+            margin-left: 0;
+        }
+        .explain{
+            color: $white;
+            text-align: center;
+            margin-left: 0;
+            @include xdesktop{
+                span{
+                    display: block;
+                }
+            }
+            @include xmobile{
+                margin-bottom: 1rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+            margin-bottom: 2rem;
+        }
+        .btn{
+            height: px-to-rem(57);
+            width: 80%;
+            background-color: $white;
+            border-radius: 60px;
+            @include flex($align : center , $justify : center);
+            color: $blue;
+            font-family: $primary-bold;
+            font-size: 1.4rem;
+            @include xmobile{
+                font-size: 1.2rem;
+            }
+        }
+    }   
+}
