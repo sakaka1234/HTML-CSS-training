@@ -1,113 +1,56 @@
-<section class="fast">
-  <div class="fast__container">
-    <div class="fast__modern">
-      <div class="fast__vertical fast__vertical__left"></div>
-      <div class="fast__content">
-        <div class="title">
-          <span class="left">Fast, Friendly and Satisfaction Guarantee</span>
-          <span class="right"
-            >No matter how big or small your work is, whether it's for the
-            interior or exterior of your home, we are ready to serve and help
-            you solve your home problems.</span
-          >
-        </div>
-        <div class="horizontal_line"></div>
-        <div class="fast__grid">
-          <div class="feature_item">
-            <img
-              src="../assets/icon/hammer.svg"
-              alt="hammer"
-              class="feature_img"
-            />
-            <div class="text">
-              <span class="title">Satisfaction Guarantee</span>
-              <p class="explain">
-                You don't need to worry about scams or our performance results.
-                Our company has been verified and strives for optimal results.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature_item">
-            <img
-              src="../assets/icon/Letter.svg"
-              alt="letter"
-              class="feature_img"
-            />
-            <div class="text">
-              <span class="title">Free Quotes</span>
-              <p class="explain">
-                Get personalized cost estimates without any obligation.
-                Experience transparency and peace of mind as you explore our
-                service.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature_item">
-            <img
-              src="../assets/icon/Location.svg"
-              alt="hammer"
-              class="feature_img"
-            />
-            <div class="text">
-              <span class="title">Local Professionals </span>
-              <p class="explain">
-                Our services cover the Nationwide, US area, including urban,
-                suburban, and rural locations for both long and short term
-                maintenance.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature_item">
-            <img
-              src="../assets/icon/Cycleday.svg"
-              alt="hammer"
-              class="feature_img"
-            />
-            <div class="text">
-              <span class="title">Fast 24-Hour Service </span>
-              <p class="explain">
-                Need fast handling for repairs to drains, leaks or something
-                else? Our experts are available anytime to help you solve the
-                problem.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature_item">
-            <img
-              src="../assets/icon/Calendar.svg"
-              alt="hammer"
-              class="feature_img"
-            />
-            <div class="text">
-              <span class="title">Flexible Appointments </span>
-              <p class="explain">
-                We offer convenient appointment times that can accommodate your
-                busy schedule, day or night, 7 days a week.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature_item">
-            <img
-              src="../assets/icon/mesage.svg"
-              alt="hammer"
-              class="feature_img"
-            />
-            <div class="text">
-              <span class="title">100% Commitment-Free </span>
-              <p class="explain">
-                You are free to ask us about the problems you are facing. We
-                offer a no-commitment approach to put your mind at ease.
-              </p>
-            </div>
-          </div>
-        </div>
+<div class="fast__container">
+  <div class="fast__modern">
+    <div class="fast__vertical fast__vertical__left"></div>
+    <div class="fast__content">
+      <div class="title">
+        <span class="left">Fast, Friendly and Satisfaction Guarantee</span>
+        <span class="right"
+          >No matter how big or small your work is, whether it's for the
+          interior or exterior of your home, we are ready to serve and help you
+          solve your home problems.</span
+        >
       </div>
-      <div class="fast__vertical fast__vertical__right"></div>
+      <div class="horizontal_line"></div>
+      <div class="fast__grid">
+        <include
+          src="./components/fastItem.html"
+          locals='{
+              "fast":[
+                {
+                  "icon":"hammer",
+                  "title":"Satisfaction Guarantee",
+                  "explain":"You don’t need to worry about scams or our performance results. Our company has been verified and strives for optimal results."
+                },
+                {
+                  "icon":"Letter",
+                  "title":"Free Quotes",
+                  "explain":"Get personalized cost estimates without any obligation. Experience transparency and peace of mind as you explore our service."
+                },
+                {
+                  "icon":"Location",
+                  "title":"Local Professionals",
+                  "explain":"Our services cover the Nationwide, US area, including urban, suburban, and rural locations for both long and short term maintenance."
+                },
+                {
+                  "icon":"Cycleday",
+                  "title":"Fast 24-Hour Service",
+                  "explain":"Need fast handling for repairs to drains, leaks or something else? Our experts are available anytime to help you solve the problem."
+                },
+                {
+                  "icon":"Calendar",
+                  "title":"Flexible Appointments",
+                  "explain":"We offer convenient appointment times that can accommodate your busy schedule, day or night, 7 days a week."
+                },
+                {
+                  "icon":"mesage",
+                  "title":"100% Commitment-Free",
+                  "explain":"You are free to ask us about the problems you are facing. We offer a no-commitment approach to put your mind at ease."
+                }
+              ]
+            }'
+        ></include>
+      </div>
     </div>
+    <div class="fast__vertical fast__vertical__right"></div>
   </div>
-</section>
+</div>

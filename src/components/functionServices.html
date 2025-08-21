@@ -1,0 +1,12 @@
+<each loop="item in {{services}}">
+  <div class="services__detail">
+    <div class="image">
+      <img src="../assets/icon/{{item.icon}}.svg" />
+    </div>
+    <div class="title">{{item.title}}</div>
+    <div class="explain">
+      <span>{{item.desc[0]}}</span>
+      <span>{{item.desc[1]}}</span>
+    </div>
+  </div>
+</each>
