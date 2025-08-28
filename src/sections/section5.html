@@ -1,0 +1,39 @@
+<each loop="item in {{list}}">
+  <div class="homepro__container">
+    <div class="parttern">
+      <div class="container_img">
+        <img
+          src="../assets/img/bathroom.png"
+          alt="{{img-bathroom}}"
+          class="image"
+        />
+      </div>
+
+      <div class="container_content">
+        <span class="title">How HomePro<br />works</span>
+        <include
+          src="./components/homeproContent.html"
+          locals='{
+              "homepro":[
+                {
+                  "number":"1.",
+                  "function":"Call us anytime 24/7",
+                  "explain":"You can contact us directly, we will quickly put you in touch with our home care professionals who are ready anytime"
+                },
+                {
+                  "number":"2.",
+                  "function":"Schedule\nService",
+                  "explain":"After connecting your call, our home care experts will answer your questions and provide flexible appointment times"
+                },
+                {
+                  "number":"3.",
+                  "function":"Your request\nis complated",
+                  "explain":"Once your technician arrives, he will diagnose the problem and provide an estimate. If you decide to continue, the technician will get to work"
+                }
+              ]
+            }'
+        ></include>
+      </div>
+    </div>
+  </div>
+</each>
