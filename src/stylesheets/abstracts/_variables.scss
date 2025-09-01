@@ -4,8 +4,8 @@ $accent-color: #25a7df; // Light blue for buttons and elements
 $white: #ffffff;
 $light-blue: #e6f7ff;
 $gray: #f5f5f5;
-$divider-color: rgba(255, 255, 255, 0.374);
-$icon-bg-color: rgba(255, 255, 255, 0.1);
+$divider-color: rgba(255, 255, 255, 0.374); // màu vạch ngăn (trắng mờ)
+$icon-bg-color: rgba(255, 255, 255, 0.1); // nền vòng tròn
 $text-color: #ffffff;
 $blue: #15b2f5;
 $blue-dark: #0077cc;
@@ -19,8 +19,6 @@ $neutural-grey-3: #9ea3b5;
 $black: #171921;
 $neutural-grey-2: #cbcfdb;
 $light-grey: #f3f5f9;
-$explain-def: #737373;
-$footer-divider: #4ac9ff;
 // Breakpoints
 $mobile: 250px;
 $tablet: 768px;
