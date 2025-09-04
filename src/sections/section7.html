@@ -1,69 +1,36 @@
-<section class="info">
-  <div class="info__container">
-    <div class="info__wrapper">
-      <span class="title">Explore Insights in Our Blog</span>
-      <span class="explain"
-        >Find lots of insights and information on our blog. Explore, learn, and
-        get inspired today.</span
+<div class="info__container">
+  <div class="info__wrapper">
+    <span class="title">Explore Insights in Our Blog</span>
+    <span class="explain"
+      >Find lots of insights and information on our blog. Explore, learn, and
+      get inspired today.</span
+    >
+    <div class="contain_card">
+      <include
+        src="./components/infoCard.html"
+        locals='{
+          "info": [
+            {
+              "image": "iphone",
+              "title": "Understanding Smart Home Systems & Maintenance",
+              "explain": "Discover the ultimate guide to troubleshooting common smart home issues in our latest blog post. From connectivity problems to device malfunctions..."
+            },
+            {
+              "image": "worker2",
+              "title": "The Ultimate Guide to Home Repairs and Renovations",
+              "explain": "Explore everything you need to know about home repairs and renovations in our comprehensive guide. From small fixes to big projects..."
+            },
+            {
+              "image": "painting",
+              "title": "Painting Techniques for a Kitchen Refresh",
+              "explain": "Learn smart painting techniques to refresh your kitchen space with minimal effort and maximum effect..."
+            }
+          ]
+        }'
       >
-      <div class="contain_card">
-        <div class="card">
-          <img src="../assets/img/iphone.png" alt="" class="image" />
-          <span class="date">19 Jan 2023</span>
-          <span class="title"
-            >Understanding Smart Home Systems & Maintenance</span
-          >
-          <span class="explain"
-            >Discover the ultimate guide to troubleshooting common smart home
-            issues in our latest blog post. From connectivity problems to device
-            malfunctions...</span
-          >
-          <div class="contain_function">
-            <div class="function">Plumbing</div>
-            <div class="function">Architecture</div>
-            <div class="function" id="maintenance">Maintenance</div>
-            <div class="function" id="dot3">...</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="../assets/img/worker2.png" alt="" class="image" />
-          <span class="date">19 Jan 2023</span>
-          <span class="title"
-            >The Ultimate Guide to Home Repairs and Renovations</span
-          >
-          <span class="explain"
-            >Discover the ultimate guide to troubleshooting common smart home
-            issues in our latest blog post. From connectivity problems to device
-            malfunctions...</span
-          >
-          <div class="contain_function">
-            <div class="function">Plumbing</div>
-            <div class="function">Architecture</div>
-            <div class="function" id="maintenance">Maintenance</div>
-            <div class="function" id="dot3">...</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="../assets/img/painting.png" alt="" class="image" />
-          <span class="date">19 Jan 2023</span>
-          <span class="title">Painting Techniques for a Kitchen Refresh</span>
-          <span class="explain"
-            >Discover the ultimate guide to troubleshooting common smart home
-            issues in our latest blog post. From connectivity problems to device
-            malfunctions...</span
-          >
-          <div class="contain_function">
-            <div class="function">Plumbing</div>
-            <div class="function">Architecture</div>
-            <div class="function" id="maintenance">Maintenance</div>
-            <div class="function" id="dot3">...</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="view">View More</div>
+      </include>
     </div>
+
+    <div class="view">View More</div>
   </div>
-</section>
+</div>

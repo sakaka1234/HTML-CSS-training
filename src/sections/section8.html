@@ -1,73 +1,51 @@
-<section class="question">
-  <div class="question__container">
-    <div class="question__wrapper">
-      <div class="left">
-        <span class="title"
-          >Frequently Asked <br />
-          Questions</span
-        >
-        <div class="help">
-          <span class="black">Still need help?</span>
-          <span class="blue">Get Help Now</span>
-        </div>
+<div class="question__container">
+  <div class="question__wrapper">
+    <div class="left">
+      <span class="title"
+        >Frequently Asked <br />
+        Questions</span
+      >
+      <div class="help">
+        <span class="black">Still need help?</span>
+        <span class="blue">Get Help Now</span>
       </div>
+    </div>
 
-      <div class="right">
-        <div class="defenition">
-          <span class="title">What is Homepro?</span>
-          <span class="explain"
-            >HomePro is a home care platform that connects homeowners with
-            professional service providers offering a wide range of home
-            services, including repairs, maintenance, cleaning, and more.</span
-          >
-          <img
-            src="../assets/icon/arrow_up.svg"
-            alt="arrow_up"
-            class="arrow_up"
-          />
-        </div>
-        <div class="other">
-          <div class="content">
-            <span class="title"
-              >Are the service providers on HomePro reliable and qualified?
-            </span>
-            <img
-              src="../assets/icon/arrow_down.svg"
-              alt="arrow_down"
-              class="arrow_down"
-            />
-          </div>
-          <div class="content">
-            <span class="title"
-              >What if I have an issue or complaint about a service
-              provider?</span
-            >
-            <img
-              src="../assets/icon/arrow_down.svg"
-              alt="arrow_down"
-              class="arrow_down"
-            />
-          </div>
-          <div class="content">
-            <span class="title">How are payments handled on HomePro? </span>
-            <img
-              src="../assets/icon/arrow_down.svg"
-              alt="arrow_down"
-              class="arrow_down"
-            />
-          </div>
-          <div class="content">
-            <span class="title"
-              >How do I leave a review for a service provider?</span
-            >
-            <img
-              src="../assets/icon/arrow_down.svg"
-              alt="arrow_down"
-              class="arrow_down"
-            />
-          </div>
-        </div>
+    <div class="right">
+      <div class="defenition">
+        <span class="title">What is Homepro?</span>
+        <span class="explain"
+          >HomePro is a home care platform that connects homeowners with
+          professional service providers offering a wide range of home services,
+          including repairs, maintenance, cleaning, and more.</span
+        >
+        <img
+          src="../assets/icon/arrow_up.svg"
+          alt="arrow_up"
+          class="arrow_up"
+        />
+      </div>
+      <div class="other">
+        <include
+          src="./components/contentQuestion.html"
+          locals='{
+          "question": [
+            {
+              "title": "Are the service providers on HomePro reliable and qualified?"
+            },
+            {
+              "title": "What if I have an issue or complaint about a service provider?"
+            },
+            {
+              "title": "How are payments handled on HomePro?"
+            },
+            {
+              "title": "How do I leave a review for a service provider?"
+            }
+          ]
+        }'
+        ></include>
       </div>
     </div>
   </div>
-</section>
+</div>

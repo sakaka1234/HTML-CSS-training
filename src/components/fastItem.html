@@ -1,0 +1,13 @@
+<each loop="item in {{fast}}">
+  <div class="feature_item">
+    <img
+      src="../assets/icon/{{item.icon}}.svg"
+      alt="{{item.icon}}"
+      class="feature_img"
+    />
+    <div class="text">
+      <span class="title">{{item.title}}</span>
+      <p class="explain">{{item.explain}}</p>
+    </div>
+  </div>
+</each>
