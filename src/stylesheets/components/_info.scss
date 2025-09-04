@@ -37,6 +37,7 @@
   }
   .contain_card {
     width: 100%;
+    box-sizing: border-box;
     @include flex($justify: center, $gap: 2.4rem);
     text-align: left;
     min-height: px-to-rem(100);
