@@ -1,0 +1,14 @@
+<each loop="item in {{info}}">
+  <div class="card">
+    <img src="../assets/img/{{item.image}}.png" class="image" />
+    <span class="date">19 Jan 2023</span>
+    <span class="title">{{item.title}}</span>
+    <span class="explain">{{item.explain}}</span>
+    <div class="contain_function">
+      <div class="function">Plumbing</div>
+      <div class="function">Architecture</div>
+      <div class="function" id="maintenance">Maintenance</div>
+      <div class="function" id="dot3">...</div>
+    </div>
+  </div>
+</each>
