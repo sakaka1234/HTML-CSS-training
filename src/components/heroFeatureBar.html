@@ -1,0 +1,9 @@
+<each loop="item in {{hero}}">
+  <div class="group" id="{{item.id}}">
+    <figure class="feature-icon">
+      <img src="../assets/icon/{{item.image}}.svg" alt="{{item.image}}" />
+    </figure>
+    <span>{{item.text[0]}}<br />{{item.text[1]}}</span>
+  </div>
+  <span class="devider"></span>
+</each>

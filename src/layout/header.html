@@ -12,10 +12,29 @@
 
       <nav class="header__nav">
         <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#blog">Our Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <include
+            src="./components/headerList.html"
+            locals='{
+            "header":[
+            {
+              "link":"about",
+              "page":"About Us"
+            },
+            {
+              "link":"services",
+              "page":"Services"
+            },
+            {
+              "link":"blog",
+              "page":"Our Blog"
+            },
+            {
+              "link":"contact",
+              "page":"Contact"
+            }
+            ]
+          }'
+          ></include>
         </ul>
       </nav>
 

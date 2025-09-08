@@ -12,20 +12,19 @@
         <span>support home services.</span>
       </div>
       <div class="function-grid">
-        <div>
-          <ul>
-            <li class="function-list">Repair and Installation</li>
-            <li class="function-list">Maintenance</li>
-            <li class="function-list">Home Security Services</li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li class="function-list">Plumbing</li>
-            <li class="function-list">Budget-friendly</li>
-            <li class="function-list">Eco-friendly solutions</li>
-          </ul>
-        </div>
+        <include
+          src="./components/bannerFunctionList.html"
+          locals='{
+          "banner":[
+          {
+            "arr":["Repair and Installation","Maintenance","Home Security Services"]
+          },
+          {
+            "arr":["Plumbing","Budget-friendly","Eco-friendly solutions"]
+          }
+          ]
+        }'
+        ></include>
       </div>
       <div class="btn">
         We already 24 hours fast services to help you. you can contact us at

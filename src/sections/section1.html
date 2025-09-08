@@ -33,41 +33,29 @@
   </div>
 
   <div class="feature-bar">
-    <div class="group" id="guarantee1">
-      <figure class="feature-icon">
-        <img src="../assets/icon/24-Guarantee.svg" />
-      </figure>
-      <span
-        >Satisfaction<br />
-        Guarantee</span
-      >
-    </div>
-
-    <span class="devider"></span>
-
-    <div class="group" id="clock">
-      <figure class="feature-icon">
-        <img src="../assets/icon/24-Clock.svg" />
-      </figure>
-      <span
-        >24H<br />
-        Avaibility</span
-      >
-    </div>
-
-    <span class="devider"></span>
-
-    <div class="group" id="map-pin">
-      <figure class="feature-icon">
-        <img src="../assets/icon/24-Map-pin.svg" />
-      </figure>
-      <span
-        >Local US<br />
-        Profesional</span
-      >
-    </div>
-
-    <span class="devider"></span>
+    <include
+      src="./components/heroFeatureBar.html"
+      locals='{
+      "hero":[
+        {
+          "id":"guarantee1",
+          "image":"24-Guarantee",
+          "text":["Satisfaction","Guarantee"]
+        },
+        {
+          "id":"clock",
+          "image":"24-Clock",
+          "text":["24H","Availability"]
+        },
+        {
+          "id":"map-pin",
+          "image":"24-Map-pin",
+          "text":["Local US","Professional"]
+        }
+      ]
+    }'
+    >
+    </include>
 
     <div class="group" id="calendar">
       <figure class="feature-icon">
