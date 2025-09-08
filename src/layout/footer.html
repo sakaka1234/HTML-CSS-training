@@ -41,20 +41,21 @@
         </div>
 
         <div class="main_right">
-          <div class="list">
-            <span class="title">Company</span>
-            <span>About us</span>
-            <span>Services</span>
-            <span>Our blog</span>
-            <span>Contact</span>
-          </div>
-          <div class="list">
-            <span class="title">Legal</span>
-            <span>Terms</span>
-            <span>Privacy</span>
-            <span>Cookies</span>
-            <span>Liscense</span>
-          </div>
+          <include
+            src="./components/footerList.html"
+            locals='
+          {
+            "footer":[
+            {
+              "arr":["Company","About us","Services","Our Blog","Contact"]
+            },
+            {
+              "arr":["Legal","Terms","Privacy","Cookies","Liscense"]
+            }
+            ]
+          }
+          '
+          ></include>
         </div>
       </div>
     </div>
