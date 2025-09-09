@@ -136,6 +136,7 @@
       background-color: $blue;
       position: relative;
       padding: px-to-rem(5.4) 0;
+      @include scaletrans();
       .text {
         color: $white;
         position: absolute;
