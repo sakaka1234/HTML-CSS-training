@@ -71,6 +71,7 @@
     height: auto;
     left: 1rem;
     bottom: 12rem;
+    @include scaletrans();
     @include xmobile {
       width: 2.7rem;
       bottom: 0;
@@ -83,6 +84,7 @@
     height: auto;
     right: 1rem;
     bottom: 12rem;
+    @include scaletrans();
     @include xmobile {
       bottom: 0;
       right: 2rem;
