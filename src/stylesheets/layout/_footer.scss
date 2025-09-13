@@ -73,6 +73,7 @@
       padding: 0.93rem 2.1rem;
 
       border: none;
+      @include scaletrans();
       @include xmobile {
         padding: 0.8rem 1.2rem;
         @include flex();
@@ -131,6 +132,7 @@
       img {
         width: 1.6rem;
         height: auto;
+        @include moveuptrans();
       }
     }
     @include xmobile {
@@ -174,6 +176,12 @@
     }
     @include xtablet {
       display: none;
+    }
+  }
+  .rest {
+    transition: color 0.3s ease;
+    &:hover {
+      color: $neutural-grey-2;
     }
   }
 }

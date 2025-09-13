@@ -1,102 +1,106 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
-@use '../abstracts/functions' as *;
-.feature-bar{
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+.feature-bar {
   font-weight: 500;
   display: flex;
 
-  .group{
-    @include xdesktop{
+  .group {
+    @include xdesktop {
       display: flex;
-      gap : 0.75rem;
+      gap: 0.75rem;
     }
-    @include xtablet{
+    @include xtablet {
       display: flex;
-      gap : 0.75rem;
+      gap: 0.75rem;
     }
-    @include xmobile{
-      @include flex($direction : column, $align : center , $justify : center);
-      
+    @include xmobile {
+      @include flex($direction: column, $align: center, $justify: center);
+
       text-align: center;
       // border: 2px solid green;
     }
   }
-  .feature-icon{
+  .feature-icon {
+    @include moveuptrans();
     width: px-to-rem(50);
     height: px-to-rem(50);
     border-radius: 50%;
     background-color: $feature-color;
-    @include flex($align : center, $justify : center , $direction : column);
+    @include flex($align: center, $justify: center, $direction: column);
   }
-  
-  @include xdesktop{
+
+  @include xdesktop {
     display: flex;
     position: absolute;
     align-items: center;
     bottom: 3rem;
     gap: px-to-rem(50);
-    
-    div{
-      
+
+    div {
       font-size: 1rem;
-    }  
+    }
     // align-items: center;
     // border: 4px solid red;
   }
-  @include xtablet{
+  @include xtablet {
     display: flex;
     position: absolute;
     align-items: center;
     bottom: 3rem;
     gap: px-to-rem(50);
-    
-    div{
-      
+
+    div {
       font-size: 1rem;
-    }  
+    }
     // align-items: center;
     // border: 4px solid red;
   }
-  @include xmobile{
-    
-    
+  @include xmobile {
     position: absolute;
     bottom: 1rem;
     display: grid;
-    grid-template-columns: repeat(2,10rem);
-    grid-template-rows: repeat(2,7.5rem);
+    grid-template-columns: repeat(2, 10rem);
+    grid-template-rows: repeat(2, 7.5rem);
     justify-items: center;
     align-items: center;
-    #guarantee1{
+    #guarantee1 {
       grid-row: 1 / 2;
       grid-column: 1 / 2;
     }
-    #clock{
+    #clock {
       grid-row: 1 / 2;
       grid-column: 2 / 3;
     }
-    #map-pin{
+    #map-pin {
       grid-row: 2 / 3;
       grid-column: 1 / 2;
     }
-    #calendar{
+    #calendar {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
     }
-    
   }
-  .devider{
-    @include xdesktop{
+  .devider {
+    @include xdesktop {
       width: 0.1rem;
       height: px-to-rem(50);
-      background: linear-gradient(to bottom,$primary-color,$divider-color,$primary-color);
+      background: linear-gradient(
+        to bottom,
+        $primary-color,
+        $divider-color,
+        $primary-color
+      );
     }
-    @include xtablet{
+    @include xtablet {
       width: 0.1rem;
       height: px-to-rem(50);
-      background: linear-gradient(to bottom,$primary-color,$divider-color,$primary-color);
+      background: linear-gradient(
+        to bottom,
+        $primary-color,
+        $divider-color,
+        $primary-color
+      );
     }
   }
-  
 }
-

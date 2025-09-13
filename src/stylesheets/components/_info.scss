@@ -43,6 +43,9 @@
     min-height: px-to-rem(100);
     margin-top: 1rem;
     margin-bottom: 6rem;
+    @include xtablet {
+      @include flex($direction: column);
+    }
     @include xmobile {
       @include flex($direction: column);
     }
@@ -58,6 +61,7 @@
       width: 100%;
       height: auto;
       margin-bottom: 0.5rem;
+      @include moveuptrans();
     }
     .date {
       color: $neutural-grey;
@@ -90,6 +94,7 @@
     padding: 0.5rem 1.1rem;
     font-weight: 600;
     @include flex($align: center, $justify: center);
+    @include scaletrans();
   }
   .view {
     color: $blue;

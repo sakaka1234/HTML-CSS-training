@@ -64,3 +64,17 @@
     transform: translate(#{$x}, #{$y});
   }
 }
+
+@mixin moveuptrans() {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@mixin scaletrans() {
+  transition: transform 0.4s ease;
+  &:hover {
+    transform: scale(0.95);
+  }
+}
