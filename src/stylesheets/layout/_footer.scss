@@ -71,7 +71,7 @@
       font-size: 1.2rem;
       border-radius: 60px;
       padding: 0.93rem 2.1rem;
-
+      cursor: pointer;
       border: none;
       @include scaletrans();
       @include xmobile {
@@ -133,6 +133,7 @@
         width: 1.6rem;
         height: auto;
         @include moveuptrans();
+        cursor: pointer;
       }
     }
     @include xmobile {
@@ -180,8 +181,12 @@
   }
   .rest {
     transition: color 0.3s ease;
+    cursor: pointer;
     &:hover {
       color: $neutural-grey-2;
+    }
+    &:active {
+      color: $white;
     }
   }
 }

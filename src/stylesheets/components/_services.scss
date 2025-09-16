@@ -1,22 +1,16 @@
 @use "../abstracts" as *;
 .services {
   &__container {
-    height: px-to-rem(1000);
+    min-height: px-to-rem(1000);
     background-color: $white;
     position: relative;
-    @include xmobile {
-      height: px-to-rem(2000);
-    }
   }
   &__grid {
-    position: absolute;
+    margin: 0 auto;
 
-    left: 50%;
-    top: 4rem;
-    transform: translateX(-50%);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    height: px-to-rem(900);
+    min-height: px-to-rem(900);
     width: 84%;
     padding: 2rem;
     row-gap: 0rem;
@@ -24,7 +18,6 @@
       padding-bottom: 7rem;
     }
     @include xmobile {
-      height: px-to-rem(2000);
       width: 90%;
       top: 0rem;
     }
@@ -40,7 +33,7 @@
     .title {
       font-size: 3rem;
       font-family: $primary-bold;
-      color: black;
+      color: $black;
       margin-bottom: 1rem;
       @include xmobile {
         font-size: 1.5rem;
@@ -76,7 +69,11 @@
       align-items: center;
       text-align: center;
     }
-
+    @include xtablet {
+      grid-column: span 4;
+      align-items: center;
+      text-align: center;
+    }
     .image {
       @include flex($justify: center, $align: center);
       height: px-to-rem(60);
@@ -90,11 +87,15 @@
         height: px-to-rem(70);
         width: px-to-rem(70);
       }
+      @include xtablet {
+        height: px-to-rem(70);
+        width: px-to-rem(70);
+      }
     }
     .title {
       font-size: 1.5rem;
       font-family: $primary-bold;
-      color: black;
+      color: $black;
       margin-left: 1.5rem;
     }
     .explain {
@@ -117,6 +118,12 @@
     @include xmobile {
       grid-column: span 4;
       height: px-to-rem(230);
+      margin-top: 1.7rem;
+    }
+    @include xtablet {
+      grid-column: span 4;
+      align-items: center;
+      text-align: center;
       margin-top: 1.7rem;
     }
     .title {
@@ -150,6 +157,7 @@
       font-family: $primary-bold;
       font-size: 1.4rem;
       @include scaletrans();
+      cursor: pointer;
       @include xmobile {
         font-size: 1.2rem;
       }

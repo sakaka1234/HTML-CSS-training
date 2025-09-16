@@ -144,6 +144,7 @@
       position: relative;
       padding: px-to-rem(5.4) 0;
       @include scaletrans();
+      cursor: pointer;
       .text {
         color: $white;
         position: absolute;
