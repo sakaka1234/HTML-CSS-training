@@ -18,13 +18,16 @@
     @include xmobile {
       @include flex($direction: column);
     }
+    @include xtablet {
+      @include flex($direction: column);
+    }
   }
   .container_img {
     @include flex();
     width: 45%;
 
     @include xtablet {
-      width: 60%;
+      width: 100%;
     }
     @include xmobile {
       width: 100%;
@@ -47,7 +50,8 @@
       padding-left: 1rem;
     }
     @include xtablet {
-      padding-left: 7rem;
+      width: 100%;
+      padding-left: 1rem;
     }
   }
   .title {
@@ -67,10 +71,13 @@
     @include xmobile {
       @include flex($direction: column);
     }
+    @include xtablet {
+      @include flex($direction: column);
+    }
   }
   .list_function {
     @include flex();
-    width: 30%;
+    width: 27%;
     gap: 1rem;
     .number_list {
       font-family: $primary-font;
@@ -83,9 +90,13 @@
       font-size: 1.5rem;
       color: $black;
       font-family: $primary-bold;
+
+      @include xtablet {
+        font-size: 2rem;
+      }
     }
     @include xtablet {
-      width: 40%;
+      width: 59%;
     }
     @include xmobile {
       width: 59%;
@@ -95,13 +106,15 @@
     font-family: $primary-font;
     font-weight: 400;
     color: $neutural-grey;
-    width: 52%;
-    padding-left: 2rem;
+    width: 70%;
+    padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 0.1rem;
+    font-size: 1.2rem;
     @include xtablet {
-      min-width: 48%;
+      width: 100%;
       padding-right: 0;
+      font-size: 1.2rem;
     }
     @include xmobile {
       width: 100%;

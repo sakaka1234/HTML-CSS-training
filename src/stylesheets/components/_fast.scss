@@ -55,6 +55,9 @@
       @include xmobile {
         @include flex($direction: column);
       }
+      @include xtablet {
+        @include flex($direction: column);
+      }
       .left {
         font-family: $primary-font;
         color: $white;
@@ -66,7 +69,8 @@
           padding-right: 7rem;
         }
         @include xtablet {
-          width: 50%;
+          font-size: 2.5rem;
+          text-align: center;
         }
         @include xmobile {
           font-size: 1.5rem;
@@ -87,6 +91,11 @@
           width: 100%;
           padding: 1rem;
         }
+        @include xtablet {
+          width: 100%;
+          padding: 1rem;
+          text-align: center;
+        }
       }
     }
     .horizontal_line {
@@ -103,6 +112,9 @@
       @include xmobile {
         display: none;
       }
+      @include xtablet {
+        display: none;
+      }
     }
   }
   &__grid {
@@ -114,6 +126,9 @@
     @include xmobile {
       grid-template-columns: 1fr;
     }
+    @include xtablet {
+      grid-template-columns: 1fr;
+    }
     .feature_item {
       all: unset;
       @include flex($align: center, $gap: 2.5rem);
@@ -123,10 +138,17 @@
         @include flex($direction: column, $align: center);
         padding: 1rem;
       }
+      @include xtablet {
+        @include flex($direction: column, $align: center);
+        padding: 1rem;
+      }
       .text {
         all: unset;
         @include flex($direction: column, $align: flex-start);
         @include xmobile {
+          text-align: center;
+        }
+        @include xtablet {
           text-align: center;
         }
 
@@ -136,6 +158,9 @@
           font-size: 1.5rem;
           font-weight: 700;
           @include xmobile {
+            margin: 0 auto;
+          }
+          @include xtablet {
             margin: 0 auto;
           }
         }

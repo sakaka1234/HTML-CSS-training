@@ -49,6 +49,9 @@
     @include xmobile {
       @include flex($direction: column);
     }
+    @include xtablet {
+      @include flex($direction: column);
+    }
   }
   .card {
     display: flex;
@@ -105,6 +108,11 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    // @include scaletrans();
+    cursor: pointer;
+    &:active {
+      color: $neutural-grey-3;
+    }
     &::after {
       content: "";
       width: 0.5rem;

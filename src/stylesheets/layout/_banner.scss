@@ -24,9 +24,6 @@
     }
   }
   &__grid {
-    // position: absolute;
-    // left: 50%;
-    // transform: translateX(-50%);
     margin: 0 auto;
 
     display: grid;
@@ -34,7 +31,7 @@
     padding: 2rem;
     min-height: px-to-rem(800);
     width: 84%;
-    // border: 4px solid red;
+
     bottom: px-to-rem(10);
     @include xmobile {
       min-height: px-to-rem(1070);
@@ -44,7 +41,6 @@
   }
   &__left {
     @include xdesktop {
-      // @include move($display : inline-block, $translateY : px-to-rem(100));
       padding-top: px-to-rem(100);
     }
     @include xtablet {
@@ -54,7 +50,7 @@
       grid-column: span 2;
     }
     .title {
-      color: black;
+      color: $black;
       font-family: $primary-bold;
       font-size: 3rem;
       margin-bottom: 1rem;
@@ -84,16 +80,22 @@
       margin-bottom: 0.1rem;
       height: px-to-rem(150);
       width: 80%;
-      // border: 4px solid green;
+
       @include xdesktop {
-        // margin-bottom: px-to-rem(10);
         div ul li {
           margin-bottom: px-to-rem(12);
         }
       }
       @include xmobile {
         grid-template-columns: 1fr;
-        // margin-bottom: px-to-rem(10);
+
+        div ul li {
+          margin-bottom: px-to-rem(12);
+        }
+      }
+      @include xtablet {
+        grid-template-columns: 1fr;
+
         div ul li {
           margin-bottom: px-to-rem(12);
         }
@@ -129,11 +131,13 @@
         margin-top: 6rem;
       }
       @include xtablet {
-        width: 80%;
+        margin-top: 6rem;
+        width: 100%;
+        text-align: center;
       }
       span {
         font-size: px-to-rem(20);
-        // font-family: 800;
+
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-offset: 4px;

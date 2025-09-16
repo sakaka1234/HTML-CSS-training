@@ -55,6 +55,12 @@
       color: $blue;
       font-size: 1.2rem;
       border-bottom: 0.1rem solid $blue;
+      cursor: pointer;
+      &:active {
+        color: $neutural-grey-3;
+        border-bottom: 0.1rem solid $neutural-grey-3;
+      }
+      // @include moveuptrans();
     }
   }
   .right {

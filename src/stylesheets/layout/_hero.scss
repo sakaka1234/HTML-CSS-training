@@ -40,28 +40,35 @@
   &__devider {
     .newdeviderX {
       @include xmobile {
-        content: "";
-        @include move(
-          $display: inline-block,
-          $translateY: px-to-rem(275),
-          $translateX: px-to-rem(0)
-        );
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 8.5rem;
+
         height: 0.15rem;
         width: px-to-rem(300);
-        background-image: url(../assets/icon/lineX.png);
+        background: linear-gradient(
+          to right,
+          $primary-color,
+          $hero-devider,
+          $primary-color
+        );
       }
     }
     .newdeviderY {
       @include xmobile {
-        content: "";
-        @include move(
-          $display: inline-block,
-          $translateY: px-to-rem(390),
-          $translateX: px-to-rem(-146)
-        );
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1rem;
         height: px-to-rem(240);
-        width: 0.1rem;
-        background-image: url(../assets/icon/lineY.png);
+        width: 0.2rem;
+        background: linear-gradient(
+          to bottom,
+          $primary-color,
+          $hero-devider,
+          $primary-color
+        );
       }
     }
   }
@@ -137,6 +144,7 @@
       position: relative;
       padding: px-to-rem(5.4) 0;
       @include scaletrans();
+      cursor: pointer;
       .text {
         color: $white;
         position: absolute;
