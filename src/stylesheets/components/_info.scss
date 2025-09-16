@@ -43,6 +43,9 @@
     min-height: px-to-rem(100);
     margin-top: 1rem;
     margin-bottom: 6rem;
+    @include xtablet {
+      @include flex($direction: column);
+    }
     @include xmobile {
       @include flex($direction: column);
     }
