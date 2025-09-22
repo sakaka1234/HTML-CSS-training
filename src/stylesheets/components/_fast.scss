@@ -40,11 +40,6 @@
   }
   &__content {
     width: 86%;
-
-    // height: 100%;
-    // position: absolute;
-    // left: 50%;
-    // transform: translateX(-50%);
     padding: 2rem;
     gap: 2rem;
     margin: 0 auto;
@@ -59,6 +54,7 @@
         @include flex($direction: column);
       }
       .left {
+        all: unset;
         font-family: $primary-font;
         color: $white;
         font-size: 3rem;
@@ -78,14 +74,16 @@
         }
       }
       .right {
+        all: unset;
         width: 50%;
         padding-top: 4rem;
-        padding-left: 6rem;
+
         font-family: $primary-font;
         color: $neutural-grey-3;
 
         @include xdesktop {
           padding-right: 6rem;
+          padding-left: 11rem;
         }
         @include xmobile {
           width: 100%;
